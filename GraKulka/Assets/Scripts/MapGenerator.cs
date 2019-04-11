@@ -1,45 +1,36 @@
-﻿using UnityEditor;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class MapGenerator : EditorWindow
+public class MapGenerator : MonoBehaviour
 {
-	float mapSize = 1f;
-	string generateButton = "Generate Map";
-	bool generating = false;
-	string status = "Idle";
+	public Transform tilePrefab ;
 
-	void OnGUI()
+	public void GenerateMap(Vector2 mapSize)
 	{
-		GUILayout.Label("Base Settings", EditorStyles.boldLabel);
-		mapSize = EditorGUILayout.Slider("Map size", mapSize, 0, 50);
-		if (GUILayout.Button(generateButton))
+		GameObject tile = Instantiate(Resources.Load("Prefabs/Tile", typeof (GameObject))) as GameObject;
+		tile.name = "First";
+		tile.tag = "Tile";
+		tilePrefab = tile.transform;
+		string holderName = "Map";
+
+		if (GameObject.Find("Map"))
 		{
-			if (generating)
-			{
-				generateButton = "Generate Map";
-				generating = false;
-				status = "Idle";
-			}
-			else
-			{
-				generateButton = "Stop";
-				generating = true;
-				status = "Generating";
+			DestroyImmediate(GameObject.Find("Map").gameObject);
+		}
+
+		Transform mapholder = new GameObject(holderName).transform;
+
+		for (int x = 0; x < mapSize.x; x++)
+		{
+			Transform rowHolder = new GameObject("Row" + x).transform;
+			rowHolder.parent = mapholder;
+			for (int y = 0; y < mapSize.y; y++)
+			{	
+					Vector3 tilePosition = new Vector3(-mapSize.x / 2 + 0.5f + x, 0, -mapSize.y / 2 + 0.5f + y);
+					Transform newTile = Instantiate(tilePrefab, tilePosition, Quaternion.identity) as Transform;
+					newTile.name = "Tile" + y;
+					newTile.parent = rowHolder;
 			}
 		}
-		EditorGUILayout.LabelField("Status: ", status);
-	}
-
-	void Update()
-	{
-		if (generating)
-		{
-			GenerateMap();
-		}
-	}
-
-	void GenerateMap()
-	{
-
+		DestroyImmediate(GameObject.Find("First").gameObject);
 	}
 }

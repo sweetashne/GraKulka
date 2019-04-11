@@ -29,6 +29,6 @@ public class Tools
 	[MenuItem("Tools/Map Generator")]
 	public static void MapGenerator()
 	{
-		EditorWindow.GetWindow(typeof(MapGenerator));
+		EditorWindow.GetWindow(typeof(MapGeneratorWindow));
 	}
 }
