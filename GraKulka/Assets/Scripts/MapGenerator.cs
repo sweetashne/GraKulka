@@ -4,7 +4,7 @@ using UnityEngine;
 public class MapGenerator : EditorWindow
 {
 	float mapSize = 1f;
-	string generateButton = "Generate map";
+	string generateButton = "Generate Map";
 	bool generating = false;
 	string status = "Idle";
 
@@ -14,16 +14,17 @@ public class MapGenerator : EditorWindow
 		mapSize = EditorGUILayout.Slider("Map size", mapSize, 0, 50);
 		if (GUILayout.Button(generateButton))
 		{
-			if (generating)  //recording
+			if (generating)
 			{
-				status = "Generating";
-				generateButton = "Generate map";
+				generateButton = "Generate Map";
 				generating = false;
+				status = "Idle";
 			}
-			else     // idle
+			else
 			{
 				generateButton = "Stop";
 				generating = true;
+				status = "Generating";
 			}
 		}
 		EditorGUILayout.LabelField("Status: ", status);
