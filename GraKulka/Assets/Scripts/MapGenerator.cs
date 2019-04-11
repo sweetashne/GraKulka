@@ -2,13 +2,14 @@
 
 public class MapGenerator : MonoBehaviour
 {
-	public Transform tilePrefab ;
+	public Transform tilePrefab;
 
 	public void GenerateMap(Vector2 mapSize)
 	{
 		GameObject tile = Instantiate(Resources.Load("Prefabs/Tile", typeof (GameObject))) as GameObject;
 		tile.name = "First";
 		tile.tag = "Tile";
+		tile.AddComponent<BoxCollider>();
 		tilePrefab = tile.transform;
 		string holderName = "Map";
 
