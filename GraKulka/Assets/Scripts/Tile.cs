@@ -2,13 +2,13 @@
 
 public class Tile : MonoBehaviour
 {
-	public bool Selectable = false;
-	bool TileSelected = false;
+	public bool selectable = false;
+	bool tileSelected = false;
 	public Canvas Ui;
 
 	public void Update()
 	{
-		if (Selectable)
+		if (selectable)
 		{
 			GetComponent<Renderer>().material.color = Color.magenta;
 		}
@@ -18,16 +18,66 @@ public class Tile : MonoBehaviour
 		}
 	}
 
-	public void ShowUI()
+
+	private void OnGUI()
 	{
-		Debug.Log("Clicked");
+		if (tileSelected)
+		{
+			GUILayout.Label("Add some shit");
+
+			if (GUILayout.Button("Add a wall"))
+			{
+				AddWall(this);
+				tileSelected = false;
+				Debug.Log("Wall added");
+			}
+
+			if (GUILayout.Button("Add a ramp"))
+			{
+				AddRamp(this);
+				tileSelected = false;
+				Debug.Log("Ramp Added");
+			}
+
+			if (GUILayout.Button("Add a 45 degree wall"))
+			{
+				Add45Wall(this);
+				tileSelected = false;
+				Debug.Log("45wall added");
+			}
+		}
 	}
 
-	private void OnMouseDown()
+	private void AddRamp(Tile tile)
 	{
-		if (Selectable)
+		GameObject Ramp = Resources.Load("Prefabs/Wall") as GameObject;
+		Ramp.name = "Ramp";
+		Vector3 position = tile.transform.position + new Vector3(0, 0.9f, -0.2f);
+		Instantiate(Ramp, position, Quaternion.Euler(new Vector3(45, 0, 0)));
+	}
+
+	private void Add45Wall(Tile tile)
+	{
+		GameObject Wall = Resources.Load("Prefabs/Wall") as GameObject;
+		Wall.name = "45Wall";
+		Vector3 position = tile.transform.position + new Vector3(0, 1, 0);
+		Instantiate(Wall, position, Quaternion.Euler(new Vector3(0, 45, 0)));
+	}
+
+	void OnMouseDown()
+	{
+		if (selectable)
 		{
+			tileSelected = true;
 			Debug.Log("Klik");
 		}
+	}
+
+	protected void AddWall(Tile tile)
+	{
+		GameObject Wall = Resources.Load("Prefabs/Wall") as GameObject;
+		Wall.name = "Wall";
+		Vector3 position = tile.transform.position + new Vector3(0, 1, -0.5f);
+		Instantiate(Wall, position, Quaternion.identity);
 	}
 }
