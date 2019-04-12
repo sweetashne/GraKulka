@@ -18,7 +18,6 @@ public class Tile : MonoBehaviour
 		}
 	}
 
-
 	private void OnGUI()
 	{
 		if (tileSelected)
@@ -52,16 +51,18 @@ public class Tile : MonoBehaviour
 	{
 		GameObject Ramp = Resources.Load("Prefabs/Wall") as GameObject;
 		Ramp.name = "Ramp";
+		Ramp.transform.localScale = new Vector3(1, 1, 0.1f);
 		Vector3 position = tile.transform.position + new Vector3(0, 0.9f, -0.2f);
 		Instantiate(Ramp, position, Quaternion.Euler(new Vector3(45, 0, 0)));
 	}
 
 	private void Add45Wall(Tile tile)
 	{
-		GameObject Wall = Resources.Load("Prefabs/Wall") as GameObject;
-		Wall.name = "45Wall";
+		GameObject WallDegree = Resources.Load("Prefabs/Wall") as GameObject;
+		WallDegree.name = "45Wall";
+		WallDegree.transform.localScale = new Vector3(1.314f, 1, 0.1f);
 		Vector3 position = tile.transform.position + new Vector3(0, 1, 0);
-		Instantiate(Wall, position, Quaternion.Euler(new Vector3(0, 45, 0)));
+		Instantiate(WallDegree, position, Quaternion.Euler(new Vector3(0, 45, 0)));
 	}
 
 	void OnMouseDown()
@@ -77,6 +78,7 @@ public class Tile : MonoBehaviour
 	{
 		GameObject Wall = Resources.Load("Prefabs/Wall") as GameObject;
 		Wall.name = "Wall";
+		Wall.transform.localScale = new Vector3(1, 1, 0.1f);
 		Vector3 position = tile.transform.position + new Vector3(0, 1, -0.5f);
 		Instantiate(Wall, position, Quaternion.identity);
 	}

@@ -22,7 +22,7 @@ public class Tools
 
 		foreach (GameObject tile in tiles)
 		{
-			tile.AddComponent<Tile>(); 
+			tile.AddComponent<Tile>();
 		}
 	}
 
