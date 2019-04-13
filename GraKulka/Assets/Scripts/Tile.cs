@@ -4,7 +4,6 @@ public class Tile : MonoBehaviour
 {
 	public bool selectable = false;
 	bool tileSelected = false;
-	public Canvas Ui;
 
 	// Update is called every frame, if the MonoBehaviour is enabled.
 	private void Update()
@@ -19,6 +18,7 @@ public class Tile : MonoBehaviour
 		}
 	}
 
+	// TODO: @Piorutko Add a cancel button that hides the GUI.
 	// MonoBehaviour method. OnGUI is called for rendering and handling GUI events.
 	private void OnGUI()
 	{
@@ -44,7 +44,6 @@ public class Tile : MonoBehaviour
 
 			if (GUILayout.Button("Add a 45 degree wall"))
 			{
-				// Does the ray intersect any objects excluding the player layer
 				Add45Wall(this);
 				tileSelected = false;
 			}

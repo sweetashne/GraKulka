@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class Tools
 {
+	// Add a menu item to unity menu.
 	[MenuItem("Tools/Assign Tile Material")]
 	public static void AssignTileMaterial()
 	{
