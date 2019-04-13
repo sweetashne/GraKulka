@@ -44,22 +44,24 @@ public class Camera : MonoBehaviour
 				localRotation.y = Mathf.Clamp(localRotation.y, 0f, 90f);
 			}
 			// Zooming input from scroll wheel
-			if (Input.GetAxis("Mouse ScrollWheel") != 0f)
-			{
-				float scrollAmout = Input.GetAxis("Mouse ScrollWheel") * scrollsensitivity;
-				// Makes camera zoom faster the further away it is from the target
-				scrollAmout *= (this.cameraDistance * 0.3f);
-				this.cameraDistance += scrollAmout * -1f;
-				// This makes camera go no closer than 1.5 meters from target, and no further than 100 meters
-				this.cameraDistance = Mathf.Clamp(this.cameraDistance, 1.5f, 100f);
-			}
+			
 			Quaternion QT = Quaternion.Euler(localRotation.y, localRotation.x, 0);
 			this.parentObject.rotation = Quaternion.Lerp(this.parentObject.rotation, QT, Time.deltaTime * rotationSpeed);
 
-			if(this.cameraPivotObject.localPosition.z != this.cameraDistance * -1f)
-			{
-				this.cameraPivotObject.localPosition = new Vector3(0, 0, Mathf.Lerp(this.cameraPivotObject.localPosition.z, this.cameraDistance * -1f, Time.deltaTime * scrollSpeed));
-			}
+		
+		}
+		if (Input.GetAxis("Mouse ScrollWheel") != 0f)
+		{
+			float scrollAmout = Input.GetAxis("Mouse ScrollWheel") * scrollsensitivity;
+			// Makes camera zoom faster the further away it is from the target
+			scrollAmout *= (this.cameraDistance * 0.3f);
+			this.cameraDistance += scrollAmout * -1f;
+			// This makes camera go no closer than 1.5 meters from target, and no further than 100 meters
+			this.cameraDistance = Mathf.Clamp(this.cameraDistance, 1.5f, 100f);
+		}
+		if (this.cameraPivotObject.localPosition.z != this.cameraDistance * -1f)
+		{
+			this.cameraPivotObject.localPosition = new Vector3(0, 0, Mathf.Lerp(this.cameraPivotObject.localPosition.z, this.cameraDistance * -1f, Time.deltaTime * scrollSpeed));
 		}
 	}
 }

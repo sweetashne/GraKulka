@@ -47,6 +47,7 @@ public class Tile : MonoBehaviour
 		}
 	}
 
+	// TODO: You can only place one wall on a tile. @Sweetashne
 	private void AddRamp(Tile tile)
 	{
 		GameObject Ramp = Resources.Load("Prefabs/Wall") as GameObject;

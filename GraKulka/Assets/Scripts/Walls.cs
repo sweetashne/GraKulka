@@ -24,10 +24,12 @@ public class Walls : MonoBehaviour
 	// TODO: @Piorutko
 	void RotateRamp()
 	{
-		transform.Rotate(new Vector3(-45, 0, 0));
-		transform.Rotate(new Vector3(0, 90, 0));
-		transform.Translate(new Vector3(-0.2f, 0, 0.5f));
-		transform.Rotate(new Vector3(-45, 0, 0));
+		transform.rotation = Quaternion.Euler(transform.rotation.x + 45, transform.rotation.y + 90, 0);
+		transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + 0.2f);
+		//transform.Rotate(new Vector3(-45, 0, 0));
+		//transform.Rotate(new Vector3(0, 90, 0));
+		//transform.Translate(new Vector3(-0.2f, 0, 0.5f));
+		//transform.Rotate(new Vector3(-45, 0, 0));
 	}
 
 	void RotateWallDegree()
