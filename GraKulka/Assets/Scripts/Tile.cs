@@ -8,7 +8,7 @@ public class Tile : MonoBehaviour
 	// Update is called every frame, if the MonoBehaviour is enabled.
 	private void Update()
 	{
-		if (selectable)
+		if (selectable && GameState.GameIsPaused)
 		{
 			GetComponent<Renderer>().material.color = Color.magenta;
 		}
@@ -25,7 +25,7 @@ public class Tile : MonoBehaviour
 		RaycastHit hit;
 
 		// Checks if there is object above the tile and the tile is selected
-		if (tileSelected && !Physics.Raycast(this.transform.position, Vector3.up, out hit, 1))
+		if (tileSelected && !Physics.Raycast(this.transform.position, Vector3.up, out hit, 1) && GameState.GameIsPaused)
 		{
 			GUILayout.Label("Add some shit");
 
@@ -50,13 +50,14 @@ public class Tile : MonoBehaviour
 		}
 	}
 
+	// TODO: @Sweetashne User can't place 2 walls on one tile
 	private void AddRamp(Tile tile)
 	{
 		// Create a new object that's loaded from Resources folder.
 		GameObject Ramp = Resources.Load("Prefabs/Wall") as GameObject;
 		Ramp.name = "Ramp";
-		Ramp.GetComponent<BoxCollider>().size = new Vector3(1,1,3);
-		Ramp.GetComponent<BoxCollider>().center = new Vector3(0,0,1);
+		//Ramp.GetComponent<BoxCollider>().size = new Vector3(1,1,3);
+		//Ramp.GetComponent<BoxCollider>().center = new Vector3(0,0,1);
 		Ramp.transform.localScale = new Vector3(1, 1, 0.1f);
 		Vector3 position = tile.transform.position + new Vector3(0, 0.9f, -0.2f);
 
@@ -68,8 +69,8 @@ public class Tile : MonoBehaviour
 	{
 		GameObject WallDegree = Resources.Load("Prefabs/Wall") as GameObject;
 		WallDegree.name = "45Wall";
-		WallDegree.GetComponent<BoxCollider>().size = new Vector3(0.3f, 1, 10);
-		WallDegree.GetComponent<BoxCollider>().center = Vector3.zero;
+		//WallDegree.GetComponent<BoxCollider>().size = new Vector3(0.3f, 1, 10);
+		//WallDegree.GetComponent<BoxCollider>().center = Vector3.zero;
 		WallDegree.transform.localScale = new Vector3(1.314f, 1, 0.1f);
 		Vector3 position = tile.transform.position + new Vector3(0, 1, 0);
 		Instantiate(WallDegree, position, Quaternion.Euler(new Vector3(0, 45, 0)));
@@ -79,7 +80,7 @@ public class Tile : MonoBehaviour
 	private void OnMouseDown()
 	{
 		// User can only click on a tile if it's selectable.
-		if (selectable)
+		if (selectable && GameState.GameIsPaused)
 		{
 			tileSelected = true;
 		}
@@ -89,8 +90,8 @@ public class Tile : MonoBehaviour
 	{
 		GameObject Wall = Resources.Load("Prefabs/Wall") as GameObject;
 		Wall.name = "Wall";
-		Wall.GetComponent<BoxCollider>().size = new Vector3(1, 1, 10);
-		Wall.GetComponent<BoxCollider>().center = new Vector3(0, 0, 5);
+		//Wall.GetComponent<BoxCollider>().size = new Vector3(1, 1, 10);
+		//Wall.GetComponent<BoxCollider>().center = new Vector3(0, 0, 5);
 		Wall.transform.localScale = new Vector3(1, 1, 0.1f);
 		Vector3 position = tile.transform.position + new Vector3(0, 1, -0.5f);
 		Instantiate(Wall, position, Quaternion.identity);

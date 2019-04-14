@@ -47,7 +47,14 @@ public class Camera : MonoBehaviour
 				localRotation.y = Mathf.Clamp(localRotation.y, 0f, 90f);
 			}
 			Quaternion QT = Quaternion.Euler(localRotation.y, localRotation.x, 0);
-			this.parentObject.rotation = Quaternion.Lerp(this.parentObject.rotation, QT, Time.deltaTime * rotationSpeed);
+			if (Time.deltaTime == 0)
+			{
+				this.parentObject.rotation = Quaternion.Lerp(this.parentObject.rotation, QT, rotationSpeed);
+			}
+			else
+			{
+				this.parentObject.rotation = Quaternion.Lerp(this.parentObject.rotation, QT, Time.deltaTime * rotationSpeed);
+			}
 		}
 
 		// Zooming input from scroll wheel
@@ -65,7 +72,14 @@ public class Camera : MonoBehaviour
 
 		if (this.cameraPivotObject.localPosition.z != this.cameraDistance * -1f)
 		{
-			this.cameraPivotObject.localPosition = new Vector3(0, 0, Mathf.Lerp(this.cameraPivotObject.localPosition.z, this.cameraDistance * -1f, Time.deltaTime * scrollSpeed));
+			if (Time.deltaTime == 0)
+			{
+				this.cameraPivotObject.localPosition = new Vector3(0, 0, Mathf.Lerp(this.cameraPivotObject.localPosition.z, this.cameraDistance * -1f, scrollSpeed));
+			}
+			else
+			{
+				this.cameraPivotObject.localPosition = new Vector3(0, 0, Mathf.Lerp(this.cameraPivotObject.localPosition.z, this.cameraDistance * -1f, Time.deltaTime * scrollSpeed));
+			}
 		}
 	}
 }
