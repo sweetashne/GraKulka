@@ -22,6 +22,7 @@ public class Walls : MonoBehaviour
 	}
 
 	// TODO: @Piorutko
+	// @Sweetashne If walls have rigidbody ramp will just fall on the floor.
 	void RotateRamp()
 	{
 		transform.rotation = Quaternion.Euler(transform.rotation.x + 45, transform.rotation.y + 90, 0);
