@@ -22,10 +22,12 @@ public class Tile : MonoBehaviour
 	// MonoBehaviour method. OnGUI is called for rendering and handling GUI events.
 	private void OnGUI()
 	{
+
 		// Checks if there is object above the tile and the tile is selected
 		// TODO: Tweak numbers so you can use the tile next to the tile u press but to still see the wall above
-		if (tileSelected && !Physics.CheckBox(this.transform.position + Vector3.up, new Vector3(0.44f, 0.44f, 0.44f)) && GameState.GameIsPaused)
+		if (tileSelected && !Physics.CheckBox(this.transform.position + Vector3.up, new Vector3(0.25f, 0.44f, 0.25f)) && GameState.GameIsPaused)
 		{
+			Debug.DrawLine(transform.position + Vector3.up, new Vector3(0.25f, 0.44f, 0.25f));
 			GUILayout.Label("Add some shit");
 
 			// If user clicked the button.
