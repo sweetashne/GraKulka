@@ -54,7 +54,7 @@ public class Tile : MonoBehaviour
 	private void AddRamp(Tile tile)
 	{
 		// Create a new object that's loaded from Resources folder.
-		GameObject Ramp = Resources.Load("Prefabs/Wall") as GameObject;
+		GameObject Ramp = Resources.Load("Prefabs/Ramp") as GameObject;
 		Ramp.name = "Ramp";
 		//Ramp.GetComponent<BoxCollider>().size = new Vector3(1,1,3);
 		//Ramp.GetComponent<BoxCollider>().center = new Vector3(0,0,1);
