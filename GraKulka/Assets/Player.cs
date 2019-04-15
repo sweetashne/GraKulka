@@ -9,12 +9,13 @@ public class Player : MonoBehaviour
 	{
 		speed = rb.velocity.magnitude;
 
-		if (speed < 0.16f && !GameState.GameIsPaused)
+		if (speed < 0f && !GameState.GameIsPaused)
 		{
+			Debug.Log(speed);
 			FindObjectOfType<GameState>().Editor();
 		}
 
-		if (rb.position.y < -1f)
+		if (rb.position.y < -2f)
 		{
 			FindObjectOfType<GameState>().Editor();
 		}
