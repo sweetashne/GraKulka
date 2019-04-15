@@ -20,7 +20,6 @@ public class GameState : MonoBehaviour
 		GameIsPaused = true;
 	}
 
-
 	public void Play()
 	{
 		SavePositions();
@@ -41,7 +40,6 @@ public class GameState : MonoBehaviour
 
 	void SavePositions()
 	{
-
 		player = GameObject.Find("Player");
 		walls = GameObject.FindGameObjectsWithTag("Wall");
 
@@ -52,6 +50,7 @@ public class GameState : MonoBehaviour
 		storedPlayer = new StoredObject(player.transform.position, player.transform.rotation);
 	}
 
+	// Todo: @Bug if u reset position the walls swap components (ramp has rigidbody and falls)
 	void ResetPositions()
 	{
 		player.transform.position = storedPlayer.position;
