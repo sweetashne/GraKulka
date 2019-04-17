@@ -159,7 +159,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &2772635
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -265,7 +264,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &17227862
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -371,7 +369,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &22285625
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -477,7 +474,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &42427182
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -583,7 +579,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &59905800
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -689,7 +684,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &77047495
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -795,7 +789,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &95343965
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -854,28 +847,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 95343962}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &118759189 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5860726070278827527, guid: 8959fece196dff8419e4587e2289e43f,
-    type: 3}
-  m_PrefabInstance: {fileID: 5860726070394958098}
-  m_PrefabAsset: {fileID: 0}
---- !u!54 &118759194
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 118759189}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &120401683
 GameObject:
   m_ObjectHideFlags: 0
@@ -981,7 +952,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!1 &141739610
 GameObject:
   m_ObjectHideFlags: 0
@@ -1029,7 +999,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &141739613
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1135,7 +1104,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &147306374
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1241,7 +1209,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &149306551
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1347,7 +1314,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &149901053
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1453,7 +1419,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &151104154
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1559,7 +1524,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &165022529
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1665,7 +1629,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &168757890
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1791,7 +1754,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &182122332
 GameObject:
@@ -1840,7 +1803,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &182122335
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1992,7 +1954,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &200105234
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2144,7 +2105,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &207333261
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2250,7 +2210,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &220035256
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2356,7 +2315,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &225240507
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2462,7 +2420,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &231116410
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2568,7 +2525,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &238080184
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2674,7 +2630,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &238788561
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2780,7 +2735,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &250796770
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2886,7 +2840,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &255426103
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2992,7 +2945,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &273337228
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3098,7 +3050,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &277566677
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3204,7 +3155,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &279720419
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3343,7 +3293,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: 0, z: 0}
 --- !u!1 &300086143
 GameObject:
@@ -3450,7 +3400,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!1 &316184336
 GameObject:
   m_ObjectHideFlags: 0
@@ -3498,7 +3447,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &316184339
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3604,7 +3552,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &316509104
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3710,7 +3657,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &322333381
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3816,7 +3762,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &327246270
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3922,7 +3867,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &333392691
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4028,7 +3972,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &335105451
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4134,7 +4077,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 1
-  Ui: {fileID: 0}
 --- !u!65 &349795188
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4240,7 +4182,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &360461639
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4346,7 +4287,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &364114683
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4452,7 +4392,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &372524004
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4558,7 +4497,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &375132340
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4664,7 +4602,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &386771028
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4770,7 +4707,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &389905470
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4934,7 +4870,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!1 &396422801
 GameObject:
   m_ObjectHideFlags: 0
@@ -4982,7 +4917,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &396422804
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5088,7 +5022,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &405095462
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5194,7 +5127,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &415871449
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5404,7 +5336,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!1 &436504964
 GameObject:
   m_ObjectHideFlags: 0
@@ -5452,7 +5383,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &436504967
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5558,7 +5488,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &448771816
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5664,7 +5593,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &449750128
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5770,7 +5698,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &454818502
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5876,7 +5803,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &477920000
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6074,7 +6000,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &508904257
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6180,7 +6105,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &518047509
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6286,7 +6210,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &519788226
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6392,7 +6315,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &522969705
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6498,7 +6420,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &535385911
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6662,7 +6583,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!1 &541766187
 GameObject:
   m_ObjectHideFlags: 0
@@ -6710,7 +6630,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &541766190
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6816,7 +6735,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &571245101
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6922,7 +6840,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &577610247
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7028,7 +6945,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &578431909
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7134,7 +7050,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &585363079
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7240,7 +7155,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &587095056
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7346,7 +7260,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &596010990
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7452,7 +7365,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &601922992
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7558,7 +7470,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &605689006
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7664,7 +7575,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &608677628
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7770,7 +7680,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &613961337
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7922,7 +7831,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &639312557
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8028,7 +7936,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &639313880
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8134,7 +8041,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &645325285
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8240,7 +8146,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &648502848
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8346,7 +8251,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &649285066
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8452,7 +8356,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &653642611
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8616,7 +8519,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!1 &659386782
 GameObject:
   m_ObjectHideFlags: 0
@@ -8664,7 +8566,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &659386785
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8828,7 +8729,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!1 &677776222
 GameObject:
   m_ObjectHideFlags: 0
@@ -8876,7 +8776,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &677776225
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8982,7 +8881,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &678762434
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9088,7 +8986,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &682754679
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9194,7 +9091,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &685124246
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9346,7 +9242,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &715298950
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9452,7 +9347,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &716988004
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9558,7 +9452,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &718584782
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9664,7 +9557,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &725954287
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9828,7 +9720,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!1 &730229852
 GameObject:
   m_ObjectHideFlags: 0
@@ -9876,7 +9767,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &730229855
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9982,7 +9872,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &731479178
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10041,100 +9930,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 731479175}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1001 &744780251
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1897973123349888110, guid: 0c30838ba0ce71a4a91a1c57e3f6c9f5,
-        type: 3}
-      propertyPath: m_Name
-      value: Ramp2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7810017089437691793, guid: 0c30838ba0ce71a4a91a1c57e3f6c9f5,
-        type: 3}
-      propertyPath: m_Name
-      value: Ramp (5)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7810017089437691798, guid: 0c30838ba0ce71a4a91a1c57e3f6c9f5,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 7810017089437691798, guid: 0c30838ba0ce71a4a91a1c57e3f6c9f5,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 7810017089437691798, guid: 0c30838ba0ce71a4a91a1c57e3f6c9f5,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7810017089437691798, guid: 0c30838ba0ce71a4a91a1c57e3f6c9f5,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.27059805
-      objectReference: {fileID: 0}
-    - target: {fileID: 7810017089437691798, guid: 0c30838ba0ce71a4a91a1c57e3f6c9f5,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.6532815
-      objectReference: {fileID: 0}
-    - target: {fileID: 7810017089437691798, guid: 0c30838ba0ce71a4a91a1c57e3f6c9f5,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.27059805
-      objectReference: {fileID: 0}
-    - target: {fileID: 7810017089437691798, guid: 0c30838ba0ce71a4a91a1c57e3f6c9f5,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.6532815
-      objectReference: {fileID: 0}
-    - target: {fileID: 7810017089437691798, guid: 0c30838ba0ce71a4a91a1c57e3f6c9f5,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 7810017089437691798, guid: 0c30838ba0ce71a4a91a1c57e3f6c9f5,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -45
-      objectReference: {fileID: 0}
-    - target: {fileID: 7810017089437691798, guid: 0c30838ba0ce71a4a91a1c57e3f6c9f5,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 7810017089437691798, guid: 0c30838ba0ce71a4a91a1c57e3f6c9f5,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7810017089437691798, guid: 0c30838ba0ce71a4a91a1c57e3f6c9f5,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1897973123349888105, guid: 0c30838ba0ce71a4a91a1c57e3f6c9f5,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 1897973123349888105, guid: 0c30838ba0ce71a4a91a1c57e3f6c9f5,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -6.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1897973123349888105, guid: 0c30838ba0ce71a4a91a1c57e3f6c9f5,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.4
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 0c30838ba0ce71a4a91a1c57e3f6c9f5, type: 3}
 --- !u!1 &746561836
 GameObject:
   m_ObjectHideFlags: 0
@@ -10182,7 +9977,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &746561839
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10288,7 +10082,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &762689445
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10394,7 +10187,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &771420091
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10546,7 +10338,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &776406458
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10652,7 +10443,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &777434084
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10758,7 +10548,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &785265776
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10864,7 +10653,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &785674166
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10970,7 +10758,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &793665247
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11076,7 +10863,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &798401032
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11182,7 +10968,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &800244412
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11310,7 +11095,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &807998086
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11416,7 +11200,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &830317308
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11522,7 +11305,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &831552686
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11628,7 +11410,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &847433370
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11734,7 +11515,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &854992496
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11840,7 +11620,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &855411386
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11946,7 +11725,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &866431961
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12052,7 +11830,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 1
-  Ui: {fileID: 0}
 --- !u!65 &883029724
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12158,7 +11935,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &885862746
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12264,7 +12040,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &885909027
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12370,7 +12145,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &888698823
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12476,7 +12250,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &914865469
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12599,7 +12372,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &933837109
 GameObject:
@@ -12648,7 +12421,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &933837112
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12754,7 +12526,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &940806165
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12860,7 +12631,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &971878325
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12919,28 +12689,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 971878322}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1022759273 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1897973123349888110, guid: 0c30838ba0ce71a4a91a1c57e3f6c9f5,
-    type: 3}
-  m_PrefabInstance: {fileID: 1897973122744986887}
-  m_PrefabAsset: {fileID: 0}
---- !u!54 &1022759274
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1022759273}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!1 &1028353071
 GameObject:
   m_ObjectHideFlags: 0
@@ -12988,7 +12736,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1028353074
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13094,7 +12841,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1034822786
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13200,7 +12946,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1036187589
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13306,7 +13051,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1038038538
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13412,7 +13156,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1041001840
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13518,7 +13261,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1052465014
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13624,7 +13366,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1069964485
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13730,7 +13471,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1071895630
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13836,7 +13576,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1079484819
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13942,7 +13681,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1094559835
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14048,7 +13786,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1105569976
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14154,7 +13891,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1106374662
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14260,7 +13996,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1106462070
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14366,7 +14101,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1108789985
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14472,7 +14206,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1119662889
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14578,7 +14311,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1125678736
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14684,7 +14416,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1131095740
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14790,7 +14521,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1142464982
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14896,7 +14626,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1146257169
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15060,7 +14789,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!1 &1169604043
 GameObject:
   m_ObjectHideFlags: 0
@@ -15108,7 +14836,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1169604046
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15214,7 +14941,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1174362752
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15320,7 +15046,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1183916400
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15472,7 +15197,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1192177562
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15578,7 +15302,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1192248031
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15684,7 +15407,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1199407058
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15790,7 +15512,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1203304905
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15896,7 +15617,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1219193547
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16002,7 +15722,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1221506766
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16108,7 +15827,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1234739014
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16214,7 +15932,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1236043909
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16366,7 +16083,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1248831827
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16472,7 +16188,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1251507538
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16578,7 +16293,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1253872659
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16684,7 +16398,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1269373333
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16790,7 +16503,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1269970131
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16896,7 +16608,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1276410449
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17002,7 +16713,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1277958359
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17061,28 +16771,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1277958356}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1283011528 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1897973123349888110, guid: 0c30838ba0ce71a4a91a1c57e3f6c9f5,
-    type: 3}
-  m_PrefabInstance: {fileID: 744780251}
-  m_PrefabAsset: {fileID: 0}
---- !u!54 &1283011529
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1283011528}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!1 &1296635814
 GameObject:
   m_ObjectHideFlags: 0
@@ -17130,7 +16818,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1296635817
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17236,7 +16923,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1319601321
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17342,7 +17028,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1321084392
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17448,7 +17133,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1328379100
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17554,7 +17238,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1336062276
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17660,7 +17343,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1338279791
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17766,7 +17448,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1342988494
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17872,7 +17553,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1350609087
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17978,7 +17658,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1355811069
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18084,7 +17763,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1359212189
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18190,7 +17868,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1375230528
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18296,7 +17973,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1386109851
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18402,7 +18078,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1397003859
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18508,7 +18183,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1412268865
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18614,7 +18288,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1414353668
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18720,7 +18393,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1415020927
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18884,7 +18556,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!1 &1431828250
 GameObject:
   m_ObjectHideFlags: 0
@@ -18932,7 +18603,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1431828253
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19038,7 +18708,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1447245575
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19097,28 +18766,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1447245572}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1450313090 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1897973123349888110, guid: 0c30838ba0ce71a4a91a1c57e3f6c9f5,
-    type: 3}
-  m_PrefabInstance: {fileID: 1739388630}
-  m_PrefabAsset: {fileID: 0}
---- !u!54 &1450313091
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1450313090}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!1 &1454463637
 GameObject:
   m_ObjectHideFlags: 0
@@ -19166,7 +18813,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1454463640
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19225,6 +18871,75 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1454463637}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1459734393
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2048788945787626839, guid: 88705a33da5025f4cb5d5109244eb546,
+        type: 3}
+      propertyPath: m_Name
+      value: Cannon
+      objectReference: {fileID: 0}
+    - target: {fileID: 2420336601713053242, guid: 88705a33da5025f4cb5d5109244eb546,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2420336601713053242, guid: 88705a33da5025f4cb5d5109244eb546,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2420336601713053242, guid: 88705a33da5025f4cb5d5109244eb546,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 2420336601713053242, guid: 88705a33da5025f4cb5d5109244eb546,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.4304593
+      objectReference: {fileID: 0}
+    - target: {fileID: 2420336601713053242, guid: 88705a33da5025f4cb5d5109244eb546,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.56098557
+      objectReference: {fileID: 0}
+    - target: {fileID: 2420336601713053242, guid: 88705a33da5025f4cb5d5109244eb546,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.4304593
+      objectReference: {fileID: 0}
+    - target: {fileID: 2420336601713053242, guid: 88705a33da5025f4cb5d5109244eb546,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.56098557
+      objectReference: {fileID: 0}
+    - target: {fileID: 2420336601713053242, guid: 88705a33da5025f4cb5d5109244eb546,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2420336601713053242, guid: 88705a33da5025f4cb5d5109244eb546,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2420336601713053242, guid: 88705a33da5025f4cb5d5109244eb546,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 2420336601713053242, guid: 88705a33da5025f4cb5d5109244eb546,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 75
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 88705a33da5025f4cb5d5109244eb546, type: 3}
 --- !u!1 &1466086526
 GameObject:
   m_ObjectHideFlags: 0
@@ -19272,7 +18987,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1466086529
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19424,7 +19138,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 1
-  Ui: {fileID: 0}
 --- !u!65 &1484661432
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19530,7 +19243,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1488703190
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19636,7 +19348,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1512958859
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19742,7 +19453,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1534372978
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19848,7 +19558,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1542366109
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19954,7 +19663,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1544549301
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20060,7 +19768,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1546041002
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20166,7 +19873,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1551447133
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20272,7 +19978,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1560657925
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20378,7 +20083,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1571871478
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20484,7 +20188,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1576289216
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20590,7 +20293,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1595648083
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20742,7 +20444,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1597853101
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20848,7 +20549,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1634815944
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20954,7 +20654,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1634988816
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21060,7 +20759,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1639402485
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21212,7 +20910,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1679421035
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21376,7 +21073,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!1 &1693092751
 GameObject:
   m_ObjectHideFlags: 0
@@ -21424,7 +21120,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1693092754
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21530,7 +21225,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1699228686
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21636,7 +21330,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1702248542
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21739,7 +21432,7 @@ Transform:
   - {fileID: 1862943259}
   - {fileID: 500030508}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1709702850
 GameObject:
@@ -21788,7 +21481,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1709702853
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21894,7 +21586,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1721791828
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21953,100 +21644,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1721791825}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1001 &1739388630
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1897973123349888110, guid: 0c30838ba0ce71a4a91a1c57e3f6c9f5,
-        type: 3}
-      propertyPath: m_Name
-      value: Ramp1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7810017089437691793, guid: 0c30838ba0ce71a4a91a1c57e3f6c9f5,
-        type: 3}
-      propertyPath: m_Name
-      value: Ramp (4)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7810017089437691798, guid: 0c30838ba0ce71a4a91a1c57e3f6c9f5,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 7810017089437691798, guid: 0c30838ba0ce71a4a91a1c57e3f6c9f5,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 7810017089437691798, guid: 0c30838ba0ce71a4a91a1c57e3f6c9f5,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7810017089437691798, guid: 0c30838ba0ce71a4a91a1c57e3f6c9f5,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.27059805
-      objectReference: {fileID: 0}
-    - target: {fileID: 7810017089437691798, guid: 0c30838ba0ce71a4a91a1c57e3f6c9f5,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.6532815
-      objectReference: {fileID: 0}
-    - target: {fileID: 7810017089437691798, guid: 0c30838ba0ce71a4a91a1c57e3f6c9f5,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.27059805
-      objectReference: {fileID: 0}
-    - target: {fileID: 7810017089437691798, guid: 0c30838ba0ce71a4a91a1c57e3f6c9f5,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.6532815
-      objectReference: {fileID: 0}
-    - target: {fileID: 7810017089437691798, guid: 0c30838ba0ce71a4a91a1c57e3f6c9f5,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 7810017089437691798, guid: 0c30838ba0ce71a4a91a1c57e3f6c9f5,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -45
-      objectReference: {fileID: 0}
-    - target: {fileID: 7810017089437691798, guid: 0c30838ba0ce71a4a91a1c57e3f6c9f5,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 7810017089437691798, guid: 0c30838ba0ce71a4a91a1c57e3f6c9f5,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7810017089437691798, guid: 0c30838ba0ce71a4a91a1c57e3f6c9f5,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1897973123349888105, guid: 0c30838ba0ce71a4a91a1c57e3f6c9f5,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1897973123349888105, guid: 0c30838ba0ce71a4a91a1c57e3f6c9f5,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -5.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 1897973123349888105, guid: 0c30838ba0ce71a4a91a1c57e3f6c9f5,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.7
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 0c30838ba0ce71a4a91a1c57e3f6c9f5, type: 3}
 --- !u!1 &1745197734
 GameObject:
   m_ObjectHideFlags: 0
@@ -22094,7 +21691,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1745197737
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22200,7 +21796,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1769881709
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22306,7 +21901,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1777216029
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22412,7 +22006,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1778147025
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22518,7 +22111,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1798809354
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22624,7 +22216,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 1
-  Ui: {fileID: 0}
 --- !u!65 &1834438246
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22730,7 +22321,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1843701035
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22836,7 +22426,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1844862197
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22942,7 +22531,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1859699994
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23094,7 +22682,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1867185709
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23200,7 +22787,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1872904425
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23306,7 +22892,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1878770512
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23412,7 +22997,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1879326752
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23518,7 +23102,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1885119159
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23624,7 +23207,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1892547909
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23730,7 +23312,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1893681866
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23836,7 +23417,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1898361859
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23942,7 +23522,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1901280294
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24048,7 +23627,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1908560957
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24154,7 +23732,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1910866381
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24260,7 +23837,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1919345653
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24366,7 +23942,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1923384297
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24472,7 +24047,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1933899693
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24578,7 +24152,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1941769847
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24730,7 +24303,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1949320568
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24836,7 +24408,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1953999110
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24942,7 +24513,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1962537767
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25048,7 +24618,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1963480352
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25154,7 +24723,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1964773830
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25260,7 +24828,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1966762654
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25366,7 +24933,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1969073172
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25472,7 +25038,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1979222594
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25578,7 +25143,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1981754742
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25684,7 +25248,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1984520346
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25790,7 +25353,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &1995127016
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25896,7 +25458,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &2000465623
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26002,7 +25563,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &2004542218
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26108,7 +25668,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &2013981950
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26214,7 +25773,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &2034040139
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26320,7 +25878,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &2037140940
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26426,7 +25983,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &2041862635
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26532,7 +26088,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &2045463770
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26638,7 +26193,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &2053118650
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26744,7 +26298,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &2053404563
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26908,7 +26461,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!1 &2069933108
 GameObject:
   m_ObjectHideFlags: 0
@@ -26956,7 +26508,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &2069933111
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27108,7 +26659,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &2072898752
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27214,7 +26764,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &2075537030
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27320,7 +26869,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &2079576802
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27426,7 +26974,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 1
-  Ui: {fileID: 0}
 --- !u!65 &2088133925
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27532,7 +27079,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &2091177258
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27638,7 +27184,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &2105012209
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27744,7 +27289,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &2106543144
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27850,7 +27394,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &2118194124
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27956,7 +27499,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &2125342110
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28062,7 +27604,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &2126775571
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28168,7 +27709,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &2127066131
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28274,7 +27814,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &2129507874
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28380,7 +27919,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &2135996434
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28486,7 +28024,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectable: 0
-  Ui: {fileID: 0}
 --- !u!65 &2138272181
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28595,7 +28132,7 @@ PrefabInstance:
     - target: {fileID: 1365035150580279343, guid: ed7de122ffcc78b44878ef60ac679f55,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1365035150580279343, guid: ed7de122ffcc78b44878ef60ac679f55,
         type: 3}
@@ -28619,144 +28156,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed7de122ffcc78b44878ef60ac679f55, type: 3}
---- !u!1001 &1897973122744986887
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1897973123349888110, guid: 0c30838ba0ce71a4a91a1c57e3f6c9f5,
-        type: 3}
-      propertyPath: m_Name
-      value: Ramp
-      objectReference: {fileID: 0}
-    - target: {fileID: 1897973123349888105, guid: 0c30838ba0ce71a4a91a1c57e3f6c9f5,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1897973123349888105, guid: 0c30838ba0ce71a4a91a1c57e3f6c9f5,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1897973123349888105, guid: 0c30838ba0ce71a4a91a1c57e3f6c9f5,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1897973123349888105, guid: 0c30838ba0ce71a4a91a1c57e3f6c9f5,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.27059805
-      objectReference: {fileID: 0}
-    - target: {fileID: 1897973123349888105, guid: 0c30838ba0ce71a4a91a1c57e3f6c9f5,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.6532815
-      objectReference: {fileID: 0}
-    - target: {fileID: 1897973123349888105, guid: 0c30838ba0ce71a4a91a1c57e3f6c9f5,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.27059805
-      objectReference: {fileID: 0}
-    - target: {fileID: 1897973123349888105, guid: 0c30838ba0ce71a4a91a1c57e3f6c9f5,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.6532815
-      objectReference: {fileID: 0}
-    - target: {fileID: 1897973123349888105, guid: 0c30838ba0ce71a4a91a1c57e3f6c9f5,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1897973123349888105, guid: 0c30838ba0ce71a4a91a1c57e3f6c9f5,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -45
-      objectReference: {fileID: 0}
-    - target: {fileID: 1897973123349888105, guid: 0c30838ba0ce71a4a91a1c57e3f6c9f5,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 1897973123349888105, guid: 0c30838ba0ce71a4a91a1c57e3f6c9f5,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 0c30838ba0ce71a4a91a1c57e3f6c9f5, type: 3}
---- !u!1001 &5860726070394958098
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 5860726070278827527, guid: 8959fece196dff8419e4587e2289e43f,
-        type: 3}
-      propertyPath: m_Name
-      value: Wall45
-      objectReference: {fileID: 0}
-    - target: {fileID: 5860726070278827531, guid: 8959fece196dff8419e4587e2289e43f,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5860726070278827531, guid: 8959fece196dff8419e4587e2289e43f,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5860726070278827531, guid: 8959fece196dff8419e4587e2289e43f,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5860726070278827531, guid: 8959fece196dff8419e4587e2289e43f,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5860726070278827531, guid: 8959fece196dff8419e4587e2289e43f,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.38268343
-      objectReference: {fileID: 0}
-    - target: {fileID: 5860726070278827531, guid: 8959fece196dff8419e4587e2289e43f,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5860726070278827531, guid: 8959fece196dff8419e4587e2289e43f,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: -0.92387956
-      objectReference: {fileID: 0}
-    - target: {fileID: 5860726070278827531, guid: 8959fece196dff8419e4587e2289e43f,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5860726070278827531, guid: 8959fece196dff8419e4587e2289e43f,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5860726070278827531, guid: 8959fece196dff8419e4587e2289e43f,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 405
-      objectReference: {fileID: 0}
-    - target: {fileID: 5860726070278827531, guid: 8959fece196dff8419e4587e2289e43f,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 8959fece196dff8419e4587e2289e43f, type: 3}
 --- !u!1001 &5942945032755091398
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28807,7 +28206,7 @@ PrefabInstance:
     - target: {fileID: 5942945032047396242, guid: e25dd642f82f0ff469d8ed8bdc8a6de5,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5942945032047396242, guid: e25dd642f82f0ff469d8ed8bdc8a6de5,
         type: 3}
