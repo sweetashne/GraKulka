@@ -10,10 +10,14 @@ public class GameState : MonoBehaviour
 	private GameObject[] walls;
 	StoredObject storedPlayer;
 	List<StoredObject> storedWalls;
+	GameObject spartan;
+	Animation animation;
 
 	// Start is called before the first frame update
 	void Start()
 	{
+		spartan = GameObject.FindGameObjectWithTag("spartan");
+		animation = spartan.GetComponent<Animation>();
 		storedWalls = new List<StoredObject>();
 		EditUi.SetActive(false);
 		Time.timeScale = 0f;
@@ -68,5 +72,6 @@ public class GameState : MonoBehaviour
 			}
 		}
 		player.GetComponent<Rigidbody>().isKinematic = false;
+		animation.Play("idle");
 	}
 }

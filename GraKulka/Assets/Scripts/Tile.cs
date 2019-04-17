@@ -67,7 +67,7 @@ public class Tile : MonoBehaviour
 	{
 		GameObject WallDegree = Resources.Load("Prefabs/Wall") as GameObject;
 		WallDegree.name = "45Wall";
-		WallDegree.transform.localScale = new Vector3(1.314f, 1, 0.1f);
+		WallDegree.transform.localScale = new Vector3(1.314f, 1, 0.01f);
 		Vector3 position = tile.transform.position + new Vector3(0, 1, 0);
 		Instantiate(WallDegree, position, Quaternion.Euler(new Vector3(0, 45, 0)));
 	}

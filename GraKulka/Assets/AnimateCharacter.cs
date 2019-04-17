@@ -40,7 +40,11 @@ public class AnimateCharacter : MonoBehaviour
 		if (Input.GetKeyDown(KeyCode.D))
 		{
 			transform.Rotate(new Vector3(0, 90, 0), Space.Self);
-		}
+		}	
+	}
 
+	public void Idle()
+	{
+		animation.Play("idle");
 	}
 }
