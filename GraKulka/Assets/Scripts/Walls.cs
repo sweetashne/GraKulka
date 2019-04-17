@@ -24,10 +24,7 @@ public class Walls : MonoBehaviour
 	// TODO: @Piorutko
 	void RotateRamp()
 	{
-		//transform.Rotate(new Vector3(-45, 0, 0));
-		//transform.Rotate(new Vector3(0, 90, 0));
-		//transform.Rotate(new Vector3(45, 0, 0));
-        transform.Rotate(Vector3.up, 90, Space.World);
+		transform.Rotate(Vector3.up, 90, Space.World);
 	}
 
 	void RotateWallDegree()
