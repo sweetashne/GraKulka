@@ -5,6 +5,7 @@ public class Player : MonoBehaviour
 	public Rigidbody rb;
 	public PhysicMaterial pm;
 	float speed;
+	public float height;
 	//private void Update()
 	//{
 	//	rb.AddForce(new Vector3(1, 0, 1));
