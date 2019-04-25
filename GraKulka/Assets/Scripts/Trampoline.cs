@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class Launcher : MonoBehaviour
+public class Trampoline : MonoBehaviour
 {
 	public float height;
 

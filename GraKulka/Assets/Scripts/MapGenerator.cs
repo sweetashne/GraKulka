@@ -10,8 +10,8 @@ public class MapGenerator : MonoBehaviour
 		tile.name = "First";
 		tile.tag = "Tile";
 		tile.AddComponent<Tile>();
-		Material material = Resources.Load<Material>("Tile");
-		tile.GetComponent<Renderer>().material = material;
+		//Material material = Resources.Load<Material>("Tile");
+		//tile.GetComponent<Renderer>().material = material;
 		tile.AddComponent<BoxCollider>();
 		
 		string holderName = "Map";
