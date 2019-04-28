@@ -17,7 +17,10 @@ public class GameState : MonoBehaviour
 	void Start()
 	{
 		spartan = GameObject.FindGameObjectWithTag("spartan");
-		animation = spartan.GetComponent<Animation>();
+        if (spartan != null)
+        {
+            animation = spartan.GetComponent<Animation>();
+        }
 		storedWalls = new List<StoredObject>();
 		EditUi.SetActive(false);
 		Time.timeScale = 0f;
@@ -72,6 +75,9 @@ public class GameState : MonoBehaviour
 			}
 		}
 		player.GetComponent<Rigidbody>().isKinematic = false;
-		animation.Play("idle");
+        if (animation != null)
+        {
+            animation.Play("idle");
+        }
 	}
 }
