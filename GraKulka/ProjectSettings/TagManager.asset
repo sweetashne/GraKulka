@@ -8,6 +8,7 @@ TagManager:
   - Wall
   - spartan
   - launcher
+  - npc
   layers:
   - Default
   - TransparentFX
