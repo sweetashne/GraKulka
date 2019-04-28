@@ -30,31 +30,36 @@ public class Trampoline : MonoBehaviour
             return new Vector3(Strenght, 5, 0);
         }
 
-        if (y >= 45 && y < 90)
+        if (y >= 45 && y <= 89)
         {
             Debug.Log("y >= 45 && y < 90 y: " + y);
             return new Vector3(Strenght, 5, Strenght);
         }
 
-        if (y >= 90 && y < 135)
+        if (y >= 90 && y <= 134)
         {
             Debug.Log("y >= 90 && y < 135 y: " + y);
             return new Vector3(0, 5, Strenght);
         }
-        if (y >= 135 && y < 180)
+        if (y >= 135 && y <= 179)
         {
             Debug.Log("y >= 135 && y < 180 y: " + y);
             return new Vector3(-Strenght, 5, Strenght);
         }
-        if (y >= 180 && y < 225)
+        if (y >= 180 && y <= 224)
         {
             Debug.Log("y >= 180 && y < 225 y: " + y);
             return new Vector3(-Strenght, 5, 0);
         }
-        if (y >= 225 && y < 270)
+        if (y >= 225 && y <= 269)
         {
             Debug.Log("y >= 225 && y < 270 y: " + y);
             return new Vector3(-Strenght, 5, -Strenght);
+        }
+        if (y >= 270 && y < 315)
+        {
+            Debug.Log("y >= 270 && y < 315 y: " + y);
+            return new Vector3(Strenght, 5, -Strenght);
         }
 
         Debug.Log("y >= 270 y: " + y);

@@ -48,6 +48,12 @@ public class Tile : MonoBehaviour
 				Add45Wall(this);
 				tileSelected = false;
 			}
+
+			if (GUILayout.Button("Add a trampoline"))
+			{
+				AddTrampoline(this);
+				tileSelected = false;
+			}
 		}
 	}
 
@@ -57,7 +63,7 @@ public class Tile : MonoBehaviour
 		GameObject Ramp = Resources.Load("Prefabs/Ramp") as GameObject;
 		Ramp.name = "Ramp";
 		Ramp.transform.localScale = new Vector3(1, 1, 0.1f);
-		Vector3 position = tile.transform.position + new Vector3(0, 0.9f, -0.2f);
+		Vector3 position = tile.transform.position + new Vector3(0, tile.transform.localScale.y - 0.5f, -0.2f);
 
 		// Make an instance of the object.
 		Instantiate(Ramp, position, Quaternion.Euler(new Vector3(45, 0, 0)));
@@ -68,7 +74,7 @@ public class Tile : MonoBehaviour
 		GameObject WallDegree = Resources.Load("Prefabs/Wall") as GameObject;
 		WallDegree.name = "45Wall";
 		WallDegree.transform.localScale = new Vector3(1.314f, 1, 0.01f);
-		Vector3 position = tile.transform.position + new Vector3(0, 1, 0);
+		Vector3 position = tile.transform.position + new Vector3(0, tile.transform.localScale.y - 0.5f, 0);
 		Instantiate(WallDegree, position, Quaternion.Euler(new Vector3(0, 45, 0)));
 	}
 
@@ -87,7 +93,16 @@ public class Tile : MonoBehaviour
 		GameObject Wall = Resources.Load("Prefabs/Wall") as GameObject;
 		Wall.name = "Wall";
 		Wall.transform.localScale = new Vector3(1, 1, 0.1f);
-		Vector3 position = tile.transform.position + new Vector3(0, 1, -0.5f);
+		Vector3 position = tile.transform.position + new Vector3(0, tile.transform.localScale.y - 0.5f, -0.5f);
+		Instantiate(Wall, position, Quaternion.identity);
+	}
+
+	protected void AddTrampoline(Tile tile)
+	{
+		GameObject Wall = Resources.Load("Prefabs/TrampolineHorizontal") as GameObject;
+		Wall.name = "TrampolineHorizontal";
+		Wall.transform.localScale = new Vector3(1, 0.1f, 1f);
+		Vector3 position = tile.transform.position + new Vector3(0, tile.transform.localScale.y - 0.5f, 0);
 		Instantiate(Wall, position, Quaternion.identity);
 	}
 }
