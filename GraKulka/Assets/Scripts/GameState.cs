@@ -75,10 +75,9 @@ public class GameState : MonoBehaviour
 			}
 		}
 		player.GetComponent<Rigidbody>().isKinematic = false;
-
-		if (animation)
-		{
-			animation.Play("idle");
-		}
+        if (animation != null)
+        {
+            animation.Play("idle");
+        }
 	}
 }
