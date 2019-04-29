@@ -10,11 +10,11 @@ public class Tile : MonoBehaviour
 	{
 		if (selectable && GameState.GameIsPaused)
 		{
-			GetComponent<Renderer>().material.color = Color.magenta;
+			GetComponent<Renderer>().material.color = Configuration.SelectableColor;
 		}
 		else
 		{
-			GetComponent<Renderer>().material.color = Color.white;
+			GetComponent<Renderer>().material.color = Configuration.DefaultTileColor;
 		}
 	}
 

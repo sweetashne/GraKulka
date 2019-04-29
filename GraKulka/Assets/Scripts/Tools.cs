@@ -8,7 +8,7 @@ public class Tools
 	public static void AssignTileMaterial()
 	{
 		GameObject[] tiles = GameObject.FindGameObjectsWithTag("Tile");
-		Material material = Resources.Load<Material>("Ground03");
+		Material material = Resources.Load<Material>("Materials/Ground07");
 
 		foreach (GameObject tile in tiles)
 		{
