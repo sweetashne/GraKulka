@@ -1,11 +1,14 @@
 ﻿using UnityEngine;
 
-public class EndTrigger : MonoBehaviour
+namespace Assets.Scripts
 {
-	public GameObject LevelComplete;
+    public class EndTrigger : MonoBehaviour
+    {
+        public GameObject LevelComplete;
 
-	private void OnTriggerEnter(Collider other)
-	{
-		LevelComplete.SetActive(true);
-	}
+        private void OnTriggerEnter(Collider other)
+        {
+            LevelComplete.SetActive(true);
+        }
+    }
 }

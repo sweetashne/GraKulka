@@ -1,19 +1,22 @@
 ﻿using UnityEngine;
 
-public class Hitable : MonoBehaviour
+namespace Assets.Scripts
 {
-	Animation animation;
+    public class Hitable : MonoBehaviour
+    {
+        Animation animation;
 
-	void Start()
-	{
-		animation = GetComponent<Animation>();
-	}
+        void Start()
+        {
+            animation = GetComponent<Animation>();
+        }
 
-	private void OnTriggerEnter(Collider other)
-	{
-		if (other.gameObject.tag == "Player")
-		{
-			animation.Play("die");
-		}
-	}
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.gameObject.tag == "Player")
+            {
+                animation.Play("die");
+            }
+        }
+    }
 }

@@ -1,41 +1,44 @@
 ﻿using UnityEngine;
 
-public class Walls : MonoBehaviour
+namespace Assets.Scripts
 {
-	private void OnMouseOver()
-	{
-		if (Input.GetMouseButtonDown(1))
-		{
-			if (this.name == "Wall(Clone)")
-				RotateWall();
-			if (this.name == "Ramp(Clone)")
-				RotateRamp();
-			if (this.name == "45Wall(Clone)")
-				RotateWallDegree();
-			if (this.name == "TrampolineHorizontal(Clone)")
-                TrampolineHorizontal();
-		}
-	}
-
-    private void TrampolineHorizontal()
+    public class Walls : MonoBehaviour
     {
-        transform.Rotate(Vector3.up, 45, Space.World);
+        private void OnMouseOver()
+        {
+            if (Input.GetMouseButtonDown(1))
+            {
+                if (this.name == "Wall(Clone)")
+                    RotateWall();
+                if (this.name == "Ramp(Clone)")
+                    RotateRamp();
+                if (this.name == "45Wall(Clone)")
+                    RotateWallDegree();
+                if (this.name == "TrampolineHorizontal(Clone)")
+                    TrampolineHorizontal();
+            }
+        }
+
+        private void TrampolineHorizontal()
+        {
+            transform.Rotate(Vector3.up, 45, Space.World);
+        }
+
+        void RotateWall()
+        {
+            transform.Rotate(new Vector3(0, 90, 0));
+            transform.Translate(new Vector3(-0.5f, 0, -0.5f));
+        }
+
+        // TODO: @Piorutko
+        void RotateRamp()
+        {
+            transform.Rotate(Vector3.up, 90, Space.World);
+        }
+
+        void RotateWallDegree()
+        {
+            transform.Rotate(new Vector3(0, 90, 0));
+        }
     }
-
-    void RotateWall()
-	{
-		transform.Rotate(new Vector3(0, 90, 0));
-		transform.Translate(new Vector3(-0.5f, 0, -0.5f));
-	}
-
-	// TODO: @Piorutko
-	void RotateRamp()
-	{
-		transform.Rotate(Vector3.up, 90, Space.World);
-	}
-
-	void RotateWallDegree()
-	{
-		transform.Rotate(new Vector3(0, 90, 0));
-	}
 }
