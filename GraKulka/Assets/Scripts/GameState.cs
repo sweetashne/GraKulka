@@ -21,6 +21,7 @@ public class GameState : MonoBehaviour
 			npc = GameObject.FindGameObjectWithTag("npc");
 			animation = npc.GetComponent<Animation>();
 		}
+
 		storedWalls = new List<StoredObject>();
 		EditUi.SetActive(false);
 		Time.timeScale = 0f;
@@ -75,9 +76,10 @@ public class GameState : MonoBehaviour
 			}
 		}
 		player.GetComponent<Rigidbody>().isKinematic = false;
+
         if (animation != null)
         {
-            animation.Play("idle");
+            animation.Play("dance");
         }
 	}
 }

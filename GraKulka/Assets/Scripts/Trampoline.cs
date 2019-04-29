@@ -3,6 +3,7 @@
 public class Trampoline : MonoBehaviour
 {
 	public float Height = 20;
+	public float HeightStrenght = 5;
     public float Strenght = 5;
 
     private GameObject _player;
@@ -27,42 +28,37 @@ public class Trampoline : MonoBehaviour
         if (y >= 0 && y <= 44)
         {
             Debug.Log("y >= 0 && y < 45 y: " + y);
-            return new Vector3(Strenght, 5, 0);
+            return new Vector3(Strenght, HeightStrenght, 0);
         }
 
-        if (y >= 45 && y <= 89)
+        if (y >= 45 && y < 90)
         {
             Debug.Log("y >= 45 && y < 90 y: " + y);
-            return new Vector3(Strenght, 5, Strenght);
+            return new Vector3(Strenght, HeightStrenght, Strenght);
         }
 
-        if (y >= 90 && y <= 134)
+        if (y >= 90 && y < 135)
         {
             Debug.Log("y >= 90 && y < 135 y: " + y);
-            return new Vector3(0, 5, Strenght);
+            return new Vector3(0, HeightStrenght, Strenght);
         }
-        if (y >= 135 && y <= 179)
+        if (y >= 135 && y < 180)
         {
             Debug.Log("y >= 135 && y < 180 y: " + y);
-            return new Vector3(-Strenght, 5, Strenght);
+            return new Vector3(-Strenght, HeightStrenght, Strenght);
         }
-        if (y >= 180 && y <= 224)
+        if (y >= 180 && y < 225)
         {
             Debug.Log("y >= 180 && y < 225 y: " + y);
-            return new Vector3(-Strenght, 5, 0);
+            return new Vector3(-Strenght, HeightStrenght, 0);
         }
-        if (y >= 225 && y <= 269)
+        if (y >= 225 && y < 270)
         {
             Debug.Log("y >= 225 && y < 270 y: " + y);
-            return new Vector3(-Strenght, 5, -Strenght);
-        }
-        if (y >= 270 && y < 315)
-        {
-            Debug.Log("y >= 270 && y < 315 y: " + y);
-            return new Vector3(Strenght, 5, -Strenght);
+            return new Vector3(-Strenght, HeightStrenght, -Strenght);
         }
 
         Debug.Log("y >= 270 y: " + y);
-        return new Vector3(0, 5, -Strenght);
+        return new Vector3(0, HeightStrenght, -Strenght);
     }
 }
