@@ -18,7 +18,8 @@ namespace Assets.Scripts
         // Start is called before the first frame update
         void Start()
         {
-            if (GameObject.FindGameObjectWithTag("npc"))
+			player = GameObject.Find("Player");
+			if (GameObject.FindGameObjectWithTag("npc"))
             {
                 npc = GameObject.FindGameObjectWithTag("npc");
                 animation = npc.GetComponent<Animation>();
@@ -50,34 +51,34 @@ namespace Assets.Scripts
 
         void SavePositions()
         {
-            player = GameObject.Find("Player");
-            walls = GameObject.FindGameObjectsWithTag("Wall");
+            //walls = GameObject.FindGameObjectsWithTag("Wall");
 
-            foreach (GameObject wall in walls)
-            {
-                storedWalls.Insert(0, new StoredObject(wall.transform.position, wall.transform.rotation));
-            }
+            //foreach (GameObject wall in walls)
+            //{
+            //    storedWalls.Insert(0, new StoredObject(wall.transform.position, wall.transform.rotation));
+            //}
             storedPlayer = new StoredObject(player.transform.position, player.transform.rotation);
         }
 
         // Todo: @Bug if u reset position the walls swap components (ramp has rigidbody and falls)
         void ResetPositions()
         {
-            player.transform.position = storedPlayer.position;
+			player.GetComponent<Rigidbody>().isKinematic = true;
+			player.transform.position = storedPlayer.position;
             player.transform.rotation = storedPlayer.rotation;
-            player.GetComponent<Rigidbody>().isKinematic = true;
+			player.GetComponent<Rigidbody>().isKinematic = false;
+			player.GetComponent<Rigidbody>().velocity = Vector3.zero;
 
-            foreach (GameObject wall in walls)
-            {
-                if (storedWalls.Count > 0)
-                {
-                    StoredObject oldWall = storedWalls[0];
-                    wall.transform.position = oldWall.position;
-                    wall.transform.rotation = oldWall.rotation;
-                    storedWalls.RemoveAt(0);
-                }
-            }
-            player.GetComponent<Rigidbody>().isKinematic = false;
+            //foreach (GameObject wall in walls)
+            //{
+            //    if (storedWalls.Count > 0)
+            //    {
+            //        StoredObject oldWall = storedWalls[0];
+            //        wall.transform.position = oldWall.position;
+            //        wall.transform.rotation = oldWall.rotation;
+            //        storedWalls.RemoveAt(0);
+            //    }
+            //}
 
             if (animation != null)
             {
