@@ -10,7 +10,11 @@ namespace Assets.Scripts
         // Update is called every frame, if the MonoBehaviour is enabled.
         private void Update()
         {
-            if (selectable && GameState.GameIsPaused)
+            if (tileSelected)
+            {
+                GetComponent<Renderer>().material.color = Configuration.HighlightedTileColor;
+            }
+            else if (selectable && GameState.GameIsPaused)
             {
                 GetComponent<Renderer>().material.color = Configuration.SelectableColor;
             }
@@ -36,27 +40,32 @@ namespace Assets.Scripts
                 if (GUILayout.Button("Add a wall"))
                 {
                     AddWall(this);
-                    tileSelected = false;
+                    AfterMenuAction();
                 }
 
                 if (GUILayout.Button("Add a ramp"))
                 {
                     AddRamp(this);
-                    tileSelected = false;
+                    AfterMenuAction();
                 }
 
                 if (GUILayout.Button("Add a 45 degree wall"))
                 {
                     Add45Wall(this);
-                    tileSelected = false;
+                    AfterMenuAction();
                 }
 
                 if (GUILayout.Button("Add a trampoline"))
                 {
                     AddTrampoline(this);
-                    tileSelected = false;
+                    AfterMenuAction();
                 }
             }
+        }
+
+        private void AfterMenuAction()
+        {
+            tileSelected = false;
         }
 
         private void AddRamp(Tile tile)
