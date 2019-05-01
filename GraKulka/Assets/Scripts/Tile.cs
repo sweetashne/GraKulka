@@ -11,7 +11,7 @@ namespace Assets.Scripts
 		// Update is called every frame, if the MonoBehaviour is enabled.
 		private void Update()
 		{
-			if (tileSelected)
+			if (tileSelected && !Physics.CheckBox(this.transform.position + Vector3.up, new Vector3(0.25f, 0.44f, 0.25f)))
 			{
 				GetComponent<Renderer>().material.color = Configuration.HighlightedTileColor;
 			}
