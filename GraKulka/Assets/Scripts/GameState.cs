@@ -10,6 +10,7 @@ namespace Assets.Scripts
 		private GameObject player;
 		private StoredObject storedPlayer;
 		private GameObject[] npcs;
+		public int PlaceableItems = 10;
 
 		// Start is called before the first frame update
 		void Start()
@@ -65,6 +66,11 @@ namespace Assets.Scripts
 					npc.GetComponent<Animation>().Play("dance");
 				}
 			}
+		}
+
+		public int GetPlaceableItemsCount()
+		{
+			return PlaceableItems;
 		}
 	}
 }

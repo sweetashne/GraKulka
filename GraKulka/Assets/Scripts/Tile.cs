@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Linq;
+using UnityEngine;
 
 namespace Assets.Scripts
 {
@@ -7,6 +8,14 @@ namespace Assets.Scripts
 		public bool selectable = false;
 		bool tileSelected = false;
 		bool GUIEnabled = false;
+		GameState gameState;
+		int placeableItems;
+
+		private void Start()
+		{
+			gameState = FindObjectOfType<GameState>();
+			placeableItems = gameState.GetPlaceableItemsCount();
+		}
 
 		// Update is called every frame, if the MonoBehaviour is enabled.
 		private void Update()
@@ -36,7 +45,7 @@ namespace Assets.Scripts
 				if (tileSelected && !Physics.CheckBox(this.transform.position + Vector3.up, new Vector3(0.25f, 0.44f, 0.25f)) && GameState.GameIsPaused)
 				{
 					Debug.DrawLine(transform.position + Vector3.up, new Vector3(0.25f, 0.44f, 0.25f));
-					GUILayout.Label("Add some shit");
+					GUILayout.Label("Choose an item to place:");
 
 					// If user clicked the button.
 					if (GUILayout.Button("Add a wall"))
@@ -100,8 +109,9 @@ namespace Assets.Scripts
 		// MonoBehaviour method. Is called when the user has pressed the mouse button while over the GUIElement or Collider.
 		private void OnMouseDown()
 		{
+			
 			// User can only click on a tile if it's selectable.
-			if (selectable && GameState.GameIsPaused)
+			if (selectable && GameState.GameIsPaused && GameObject.FindGameObjectsWithTag("PlaceableItem").Count() < placeableItems)
 			{
 				GUIEnabled = true;
 				tileSelected = true;

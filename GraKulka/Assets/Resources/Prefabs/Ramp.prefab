@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5367085457753322477}
   m_Layer: 0
   m_Name: Ramp
-  m_TagString: Wall
+  m_TagString: PlaceableItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
