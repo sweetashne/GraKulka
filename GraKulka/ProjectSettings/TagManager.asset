@@ -9,6 +9,8 @@ TagManager:
   - spartan
   - launcher
   - npc
+  - itemui
+  - ItemUi
   layers:
   - Default
   - TransparentFX

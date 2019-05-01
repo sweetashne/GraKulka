@@ -4,7 +4,7 @@ namespace Assets.Scripts
 {
     public class Hitable : MonoBehaviour
     {
-        Animation animation;
+		new Animation animation;
 
         void Start()
         {

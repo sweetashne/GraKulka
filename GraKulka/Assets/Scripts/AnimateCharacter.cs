@@ -5,13 +5,11 @@ namespace Assets.Scripts
     public class AnimateCharacter : MonoBehaviour
     {
         public float movespeed = 0.5f;
-        CharacterController controller;
-        Animation animation;
+        private new Animation animation;
 
         // Start is called before the first frame update
         void Start()
         {
-            controller = GetComponent<CharacterController>();
             animation = GetComponent<Animation>();
         }
 

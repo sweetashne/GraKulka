@@ -4,7 +4,9 @@ namespace Assets.Scripts
 {
     public class Walls : MonoBehaviour
     {
-        private void OnMouseOver()
+		bool GUIEnabled = false;
+
+		private void OnMouseOver()
         {
             if (Input.GetMouseButtonDown(1))
             {
@@ -40,5 +42,23 @@ namespace Assets.Scripts
         {
             transform.Rotate(new Vector3(0, 90, 0));
         }
-    }
+
+		private void OnMouseDown()
+		{
+			if(GameState.GameIsPaused == true)
+			GUIEnabled = true;
+		}
+
+		private void OnGUI()
+		{
+			if (GUIEnabled)
+			{
+				if (GUILayout.Button("Remove"))
+				{
+					DestroyImmediate(this.gameObject);
+					GUIEnabled = false;
+				}
+			}
+		}
+	}
 }

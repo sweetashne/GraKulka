@@ -4,24 +4,18 @@ namespace Assets.Scripts
 {
     public class Player : MonoBehaviour
     {
-        public Rigidbody rb;
-        public PhysicMaterial pm;
-        float speed;
-        public float height;
-        //private void Update()
-        //{
-        //	rb.AddForce(new Vector3(1, 0, 1));
-        //}
+		//float speed;
+
         void FixedUpdate()
         {
-            speed = rb.velocity.magnitude;
+            //speed = GetComponent<Rigidbody>().velocity.magnitude;
 
-            if (speed < 0.02f && !GameState.GameIsPaused)
-            {
-                FindObjectOfType<GameState>().Editor();
-            }
+            //if (speed < 0.02f && !GameState.GameIsPaused)
+            //{
+            //    FindObjectOfType<GameState>().Editor();
+            //}
 
-            if (rb.position.y < -2f)
+            if (GetComponent<Rigidbody>().position.y < -2f)
             {
                 FindObjectOfType<GameState>().Editor();
             }

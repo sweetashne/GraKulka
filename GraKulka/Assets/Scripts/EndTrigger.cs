@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Assets.Scripts
 {
@@ -9,6 +10,7 @@ namespace Assets.Scripts
         private void OnTriggerEnter(Collider other)
         {
             LevelComplete.SetActive(true);
-        }
+			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+		}
     }
 }
