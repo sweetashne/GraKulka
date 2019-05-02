@@ -92,7 +92,7 @@ namespace Assets.Scripts
 			GameObject Ramp = Resources.Load("Prefabs/Ramp") as GameObject;
 			Ramp.name = "Ramp";
 			Ramp.transform.localScale = new Vector3(1, 1, 0.1f);
-			Vector3 position = tile.transform.position + new Vector3(0, renderersize.y + tile.transform.localPosition.y -0.05f, -0.2f);
+			Vector3 position = tile.transform.position + new Vector3(0, renderersize.y + tile.transform.localPosition.y - 0.05f, -0.2f);
 
 			// Make an instance of the object.
 			Instantiate(Ramp, position, Quaternion.Euler(new Vector3(45, 0, 0)));
@@ -137,13 +137,13 @@ namespace Assets.Scripts
 
 			if (transform.position.y == 0)
 			{
-				position = tile.transform.position + new Vector3(0, transform.localScale.y - 0.5f, 0);
+				position = tile.transform.position + new Vector3(0, tile.transform.localPosition.y + 0.55f, 0);
 			}
 			else
 			{
 				position = tile.transform.position + new Vector3(0, renderersize.y, 0);
 			}
-			
+
 			Instantiate(Wall, position, Quaternion.identity);
 		}
 	}

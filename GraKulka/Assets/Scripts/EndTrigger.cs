@@ -6,7 +6,7 @@ namespace Assets.Scripts
 	public class EndTrigger : MonoBehaviour
 	{
 		public GameObject LevelComplete;
-		public int delay = 10;
+		public int delay = 5;
 
 		private void OnTriggerEnter(Collider other)
 		{
