@@ -14,8 +14,10 @@ namespace Assets.Scripts
 
 		private void Start()
 		{
+
 			gameState = FindObjectOfType<GameState>();
-			placeableItems = gameState.GetPlaceableItemsCount();
+			if (gameState != null)
+				placeableItems = gameState.GetPlaceableItemsCount();
 			renderersize = GetComponent<Renderer>().bounds.size;
 		}
 

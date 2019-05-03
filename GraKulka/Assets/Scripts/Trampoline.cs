@@ -54,7 +54,7 @@ namespace Assets.Scripts
 				return new Vector3(-Strenght, HeightStrenght, Strenght);
 			}
 
-			return new Vector3(Strenght, HeightStrenght, Strenght);
+			return new Vector3(0, HeightStrenght, Strenght);
 		}
 	}
 }
