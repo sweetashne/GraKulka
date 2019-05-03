@@ -552,6 +552,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditUi: {fileID: 9015811712755221587}
   PlayUi: {fileID: 9015811712432265504}
+  Hud: {fileID: 6845650281416276230, guid: b490070105e850448bedb50b41b74eb0, type: 3}
+  PlaceableItems: 10
 --- !u!1 &9015811713471345980
 GameObject:
   m_ObjectHideFlags: 0

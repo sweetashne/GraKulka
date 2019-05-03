@@ -7,6 +7,7 @@ namespace Assets.Scripts
 		public static bool GameIsPaused = true;
 		public GameObject EditUi;
 		public GameObject PlayUi;
+		public GameObject Hud;
 		private GameObject player;
 		private StoredObject storedPlayer;
 		private GameObject[] npcs;
@@ -30,6 +31,7 @@ namespace Assets.Scripts
 		public void Play()
 		{
 			SavePositions();
+			Hud.SetActive(false);
 			EditUi.SetActive(true);
 			PlayUi.SetActive(false);
 			Time.timeScale = 1f;
@@ -39,6 +41,7 @@ namespace Assets.Scripts
 		public void Editor()
 		{
 			ResetPositions();
+			Hud.SetActive(true);
 			EditUi.SetActive(false);
 			PlayUi.SetActive(true);
 			Time.timeScale = 0f;
