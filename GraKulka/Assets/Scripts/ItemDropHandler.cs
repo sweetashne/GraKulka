@@ -17,14 +17,16 @@ public class ItemDropHandler : MonoBehaviour, IDropHandler
 				Debug.DrawRay(hit.collider.transform.position + new Vector3(0, 0.51f, -0.5f), new Vector3(0, 0, 0.9f), Color.red, 320320320);
 				if (!Physics.Raycast(checkZ, 0.9f))
 				{
+
 					if (theitem.name == "Ramp")
 					{
-						Transform newRamp = Instantiate(Resources.Load(theitem.name), new Vector3(hit.collider.bounds.center.x - 0.5f, hit.point.y, hit.collider.bounds.center.z + 0.5f), Quaternion.Euler(0, 90, 0)) as Transform;
+						Instantiate(Resources.Load(theitem.name), new Vector3(hit.collider.bounds.center.x - 0.5f, hit.point.y, hit.collider.bounds.center.z + 0.5f), Quaternion.Euler(0, 90, 0));
 					}
 					if (theitem.name == "270Ramp")
 					{
-						Transform newRamp = Instantiate(Resources.Load(theitem.name), new Vector3(hit.collider.bounds.center.x + 0.5f, hit.point.y, hit.collider.bounds.center.z - 0.5f), Quaternion.Euler(0, 270, 0)) as Transform;
+						Instantiate(Resources.Load(theitem.name), new Vector3(hit.collider.bounds.center.x + 0.5f, hit.point.y, hit.collider.bounds.center.z - 0.5f), Quaternion.Euler(0, 270, 0));
 					}
+					EventSystem.current.SetSelectedGameObject(null);
 				}
 			}
 		}

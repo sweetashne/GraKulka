@@ -17,7 +17,7 @@ namespace Assets.Scripts
 		void Start()
 		{
 			player = GameObject.Find("Player");
-
+			SavePositions();
 			if (GameObject.FindGameObjectsWithTag("npc") != null)
 			{
 				npcs = GameObject.FindGameObjectsWithTag("npc");
@@ -30,7 +30,6 @@ namespace Assets.Scripts
 
 		public void Play()
 		{
-			SavePositions();
 			Hud.SetActive(false);
 			EditUi.SetActive(true);
 			PlayUi.SetActive(false);
