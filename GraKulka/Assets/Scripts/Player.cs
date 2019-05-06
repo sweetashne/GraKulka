@@ -4,18 +4,11 @@ namespace Assets.Scripts
 {
     public class Player : MonoBehaviour
     {
-		//float speed;
-
-        void FixedUpdate()
+		void Update()
         {
-            //speed = GetComponent<Rigidbody>().velocity.magnitude;
+			Debug.DrawRay(transform.position, Vector3.forward, Color.red, 2302302030);
 
-            //if (speed < 0.02f && !GameState.GameIsPaused)
-            //{
-            //    FindObjectOfType<GameState>().Editor();
-            //}
-
-            if (GetComponent<Rigidbody>().position.y < -2f)
+			if (GetComponent<Rigidbody>().position.y < -1)
             {
                 FindObjectOfType<GameState>().Editor();
             }

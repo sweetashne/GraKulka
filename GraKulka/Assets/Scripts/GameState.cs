@@ -16,34 +16,36 @@ namespace Assets.Scripts
 		// Start is called before the first frame update
 		void Start()
 		{
+			Time.timeScale = 0.0f;
 			player = GameObject.Find("Player");
 			SavePositions();
+
 			if (GameObject.FindGameObjectsWithTag("npc") != null)
 			{
 				npcs = GameObject.FindGameObjectsWithTag("npc");
 			}
 
 			EditUi.SetActive(false);
-			Time.timeScale = 0f;
 			GameIsPaused = true;
 		}
 
 		public void Play()
 		{
+			SavePositions();
 			Hud.SetActive(false);
 			EditUi.SetActive(true);
 			PlayUi.SetActive(false);
-			Time.timeScale = 1f;
+			Time.timeScale = 1.0f;
 			GameIsPaused = false;
 		}
 
 		public void Editor()
 		{
-			ResetPositions();
 			Hud.SetActive(true);
 			EditUi.SetActive(false);
 			PlayUi.SetActive(true);
-			Time.timeScale = 0f;
+			Time.timeScale = 0.0f;
+			ResetPositions();
 			GameIsPaused = true;
 		}
 
@@ -59,6 +61,7 @@ namespace Assets.Scripts
 			player.transform.rotation = storedPlayer.rotation;
 			player.transform.localEulerAngles = storedPlayer.localEulerAngles;
 			player.GetComponent<Rigidbody>().velocity = Vector3.zero;
+			player.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
 			player.GetComponent<Rigidbody>().isKinematic = false;
 
 			if (npcs != null)
