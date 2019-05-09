@@ -3,10 +3,17 @@ using UnityEngine.EventSystems;
 
 public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
 {
+	public bool IsDragAble;
+
+	private void Start()
+	{
+		IsDragAble = true;
+	}
 
 	public void OnDrag(PointerEventData eventData)
 	{
-		transform.position = Input.mousePosition;
+		if (IsDragAble)
+			transform.position = Input.mousePosition;
 	}
 
 	public void OnEndDrag(PointerEventData eventData)

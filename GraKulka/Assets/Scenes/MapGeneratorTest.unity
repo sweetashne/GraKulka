@@ -1942,6 +1942,61 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2285762493866204164, guid: d529e03d2a530694fb2118c4d63832c0,
+        type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4157861309151781963, guid: d529e03d2a530694fb2118c4d63832c0,
+        type: 3}
+      propertyPath: m_Colors.m_DisabledColor.r
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4157861309151781963, guid: d529e03d2a530694fb2118c4d63832c0,
+        type: 3}
+      propertyPath: m_Colors.m_DisabledColor.g
+      value: 0.49292454
+      objectReference: {fileID: 0}
+    - target: {fileID: 4157861309151781963, guid: d529e03d2a530694fb2118c4d63832c0,
+        type: 3}
+      propertyPath: m_Colors.m_DisabledColor.b
+      value: 0.49292454
+      objectReference: {fileID: 0}
+    - target: {fileID: 7007574470132427206, guid: d529e03d2a530694fb2118c4d63832c0,
+        type: 3}
+      propertyPath: m_Colors.m_DisabledColor.r
+      value: 0.5283019
+      objectReference: {fileID: 0}
+    - target: {fileID: 7007574470132427206, guid: d529e03d2a530694fb2118c4d63832c0,
+        type: 3}
+      propertyPath: m_Colors.m_DisabledColor.g
+      value: 0.5208259
+      objectReference: {fileID: 0}
+    - target: {fileID: 7007574470132427206, guid: d529e03d2a530694fb2118c4d63832c0,
+        type: 3}
+      propertyPath: m_Colors.m_DisabledColor.b
+      value: 0.5208259
+      objectReference: {fileID: 0}
+    - target: {fileID: 7007574470132427206, guid: d529e03d2a530694fb2118c4d63832c0,
+        type: 3}
+      propertyPath: m_Colors.m_DisabledColor.a
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2100561111309451546, guid: d529e03d2a530694fb2118c4d63832c0,
+        type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4246142281672650849, guid: d529e03d2a530694fb2118c4d63832c0,
+        type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3892709651731271521, guid: d529e03d2a530694fb2118c4d63832c0,
+        type: 3}
+      propertyPath: IsDragAble
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d529e03d2a530694fb2118c4d63832c0, type: 3}
 --- !u!1 &951867318
@@ -4094,7 +4149,7 @@ PrefabInstance:
     - target: {fileID: 4228702710207718921, guid: 7725d1cfe56db404db70cac12d0dd4d1,
         type: 3}
       propertyPath: m_Name
-      value: Ramp
+      value: Ramp1
       objectReference: {fileID: 0}
     - target: {fileID: 4228702710208018985, guid: 7725d1cfe56db404db70cac12d0dd4d1,
         type: 3}
@@ -4247,7 +4302,7 @@ PrefabInstance:
     - target: {fileID: 7290722152227953807, guid: 803064a3ba8287a4ebe6fe1fbd7c3f1d,
         type: 3}
       propertyPath: m_Name
-      value: Ramp270
+      value: Ramp2701
       objectReference: {fileID: 0}
     - target: {fileID: 7290722152227651759, guid: 803064a3ba8287a4ebe6fe1fbd7c3f1d,
         type: 3}

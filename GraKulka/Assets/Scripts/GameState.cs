@@ -33,22 +33,12 @@ namespace Assets.Scripts
 
 			Editor();
 			GameIsPaused = true;
-		}
-
-		private void Update()
-		{
-			if (GameIsPaused == true)
-			{
-				if (undoList.Count == 0)
-					DisableUndoButton();
-
-				if (redoList.Count == 0)
-					DisableRedoButton();
-			}
+			DisableUndoButton();
+			DisableRedoButton();
 		}
 
 		public void Play()
-		{	
+		{
 			EditUi.SetActive(true);
 			PlayUi.SetActive(false);
 			Hud.SetActive(false);
@@ -102,12 +92,18 @@ namespace Assets.Scripts
 		public void Undo()
 		{
 			GameObject theLastOne = undoList[undoList.Count - 1];
+			GameObject ojb = GameObject.Find(theLastOne.name);
+			ojb.GetComponent<ItemDragHandler>().IsDragAble = true;
+			ojb.GetComponentInParent<Button>().interactable = true;
 			redoList.Add(new StoredObject(theLastOne.name, theLastOne.transform.position, theLastOne.transform.rotation, theLastOne.transform.localEulerAngles));
 			undoList.Remove(theLastOne);
 			DestroyImmediate(theLastOne);
 
 			if (redoList.Count == 1)
 				EnableRedoButton();
+
+			if (undoList.Count == 0)
+				DisableUndoButton();
 		}
 
 		public void SavePlaceableItem(GameObject placeAbleItem)
@@ -131,31 +127,40 @@ namespace Assets.Scripts
 
 		// @Sweetashne: Make some restrictions on how many times u can redo actions.
 		// Maybe restrictions on how many items can be placed is enough.
-		// Look into the order of undo/redo actions.
+		// Look into the order of undo/redo actions and disable enable buttons/drag.
 		public void Redo()
 		{
 			GameObject newPlaceAbleItem;
 			StoredObject theLastOne = redoList[redoList.Count - 1];
+			GameObject ojb = GameObject.Find(theLastOne.name);
 			Ray checkZ = new Ray(theLastOne.position - new Vector3(-0.5f, -0.5f, 1), Vector3.forward);
 
 			if (!Physics.Raycast(checkZ, 1))
 			{
-				if (theLastOne.name == "Ramp(Clone)")
+				if (theLastOne.name == "Ramp")
 				{
 					newPlaceAbleItem = Instantiate(Resources.Load("Ramp"), theLastOne.position, theLastOne.rotation) as GameObject;
+					newPlaceAbleItem.name = "Ramp";
 					undoList.Add(newPlaceAbleItem);
 					EnableUndoButton();
 				}
 
-				if (theLastOne.name == "270Ramp(Clone)")
+				if (theLastOne.name == "270Ramp")
 				{
 					newPlaceAbleItem = Instantiate(Resources.Load("270Ramp"), theLastOne.position, theLastOne.rotation) as GameObject;
+					newPlaceAbleItem.name = "270Ramp";
 					undoList.Add(newPlaceAbleItem);
 					EnableUndoButton();
 				}
+
+				ojb.GetComponent<ItemDragHandler>().IsDragAble = false;
+				ojb.GetComponentInParent<Button>().interactable = false;
 			}
 
 			redoList.Remove(theLastOne);
+
+			if (redoList.Count == 0)
+				DisableRedoButton();
 		}
 
 		private void DisableRedoButton()
