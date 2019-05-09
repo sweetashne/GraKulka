@@ -38,7 +38,6 @@ namespace Assets.Scripts
 			}
 		}
 
-		// TODO: @Piorutko Add a cancel button that hides the GUI.
 		// MonoBehaviour method. OnGUI is called for rendering and handling GUI events.
 		private void OnGUI()
 		{

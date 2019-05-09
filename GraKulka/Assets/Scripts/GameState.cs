@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
 
 namespace Assets.Scripts
 {
@@ -8,10 +10,14 @@ namespace Assets.Scripts
 		public GameObject EditUi;
 		public GameObject PlayUi;
 		public GameObject Hud;
+		public GameObject UndoUI;
+		public GameObject RedoUI;
 		private GameObject player;
-		private StoredObject storedPlayer;
+		private StoredObject storedPlayer = new StoredObject(string.Empty, Vector3.zero, Quaternion.identity, Vector3.zero);
 		private GameObject[] npcs;
 		public int PlaceableItems = 10;
+		List<GameObject> undoList = new List<GameObject>();
+		List<StoredObject> redoList = new List<StoredObject>();
 
 		// Start is called before the first frame update
 		void Start()
@@ -25,16 +31,29 @@ namespace Assets.Scripts
 				npcs = GameObject.FindGameObjectsWithTag("npc");
 			}
 
-			EditUi.SetActive(false);
+			Editor();
 			GameIsPaused = true;
 		}
 
-		public void Play()
+		private void Update()
 		{
-			SavePositions();
-			Hud.SetActive(false);
+			if (GameIsPaused == true)
+			{
+				if (undoList.Count == 0)
+					DisableUndoButton();
+
+				if (redoList.Count == 0)
+					DisableRedoButton();
+			}
+		}
+
+		public void Play()
+		{	
 			EditUi.SetActive(true);
 			PlayUi.SetActive(false);
+			Hud.SetActive(false);
+			UndoUI.SetActive(false);
+			RedoUI.SetActive(false);
 			Time.timeScale = 1.0f;
 			GameIsPaused = false;
 		}
@@ -42,6 +61,8 @@ namespace Assets.Scripts
 		public void Editor()
 		{
 			Hud.SetActive(true);
+			UndoUI.SetActive(true);
+			RedoUI.SetActive(true);
 			EditUi.SetActive(false);
 			PlayUi.SetActive(true);
 			Time.timeScale = 0.0f;
@@ -51,7 +72,7 @@ namespace Assets.Scripts
 
 		void SavePositions()
 		{
-			storedPlayer = new StoredObject(player.transform.position, player.transform.rotation, player.transform.localEulerAngles);
+			storedPlayer = new StoredObject(player.name, player.transform.position, player.transform.rotation, player.transform.localEulerAngles);
 		}
 
 		void ResetPositions()
@@ -76,6 +97,79 @@ namespace Assets.Scripts
 		public int GetPlaceableItemsCount()
 		{
 			return PlaceableItems;
+		}
+
+		public void Undo()
+		{
+			GameObject theLastOne = undoList[undoList.Count - 1];
+			redoList.Add(new StoredObject(theLastOne.name, theLastOne.transform.position, theLastOne.transform.rotation, theLastOne.transform.localEulerAngles));
+			undoList.Remove(theLastOne);
+			DestroyImmediate(theLastOne);
+
+			if (redoList.Count == 1)
+				EnableRedoButton();
+		}
+
+		public void SavePlaceableItem(GameObject placeAbleItem)
+		{
+			undoList.Add(placeAbleItem);
+		}
+
+		private void DisableUndoButton()
+		{
+			GameObject undoUI = GameObject.Find("UndoButton");
+			Button undoButton = undoUI.GetComponent<Button>();
+			undoButton.interactable = false;
+		}
+
+		public void EnableUndoButton()
+		{
+			GameObject undoUI = GameObject.Find("UndoButton");
+			Button undoButton = undoUI.GetComponent<Button>();
+			undoButton.interactable = true;
+		}
+
+		// @Sweetashne: Make some restrictions on how many times u can redo actions.
+		// Maybe restrictions on how many items can be placed is enough.
+		// Look into the order of undo/redo actions.
+		public void Redo()
+		{
+			GameObject newPlaceAbleItem;
+			StoredObject theLastOne = redoList[redoList.Count - 1];
+			Ray checkZ = new Ray(theLastOne.position - new Vector3(-0.5f, -0.5f, 1), Vector3.forward);
+
+			if (!Physics.Raycast(checkZ, 1))
+			{
+				if (theLastOne.name == "Ramp(Clone)")
+				{
+					newPlaceAbleItem = Instantiate(Resources.Load("Ramp"), theLastOne.position, theLastOne.rotation) as GameObject;
+					undoList.Add(newPlaceAbleItem);
+					EnableUndoButton();
+				}
+
+				if (theLastOne.name == "270Ramp(Clone)")
+				{
+					newPlaceAbleItem = Instantiate(Resources.Load("270Ramp"), theLastOne.position, theLastOne.rotation) as GameObject;
+					undoList.Add(newPlaceAbleItem);
+					EnableUndoButton();
+				}
+			}
+
+			redoList.Remove(theLastOne);
+		}
+
+		private void DisableRedoButton()
+		{
+			GameObject redoUI = GameObject.Find("RedoButton");
+			Button redoButton = redoUI.GetComponent<Button>();
+			redoButton.interactable = false;
+		}
+
+		private void EnableRedoButton()
+		{
+			GameObject redoUI = GameObject.Find("RedoButton");
+			Button redoButton = redoUI.GetComponent<Button>();
+			redoButton.interactable = true;
 		}
 	}
 }

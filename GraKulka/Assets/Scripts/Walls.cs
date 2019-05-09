@@ -32,7 +32,6 @@ namespace Assets.Scripts
 			transform.Translate(new Vector3(-0.5f, 0, -0.5f));
 		}
 
-		// TODO: @Piorutko
 		void RotateRamp()
 		{
 			transform.Rotate(Vector3.up, 90, Space.World);

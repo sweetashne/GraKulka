@@ -2,17 +2,19 @@
 
 namespace Assets.Scripts
 {
-    public class StoredObject
-    {
-        public Vector3 position;
-        public Quaternion rotation;
+	public class StoredObject
+	{
+		public string name;
+		public Vector3 position;
+		public Quaternion rotation;
 		public Vector3 localEulerAngles;
 
-		public StoredObject(Vector3 _position, Quaternion _rotation, Vector3 _localEulerAngles)
-        {
-            position = _position;
-            rotation = _rotation;
+		public StoredObject(string _name, Vector3 _position, Quaternion _rotation, Vector3 _localEulerAngles)
+		{
+			name = _name;
+			position = _position;
+			rotation = _rotation;
 			localEulerAngles = _localEulerAngles;
 		}
-    }
+	}
 }
