@@ -1,21 +1,21 @@
 fileFormatVersion: 2
-guid: 432302bf543dba34ba42c79696001003
+guid: 77210700abd9fb94d9ac04f82b397236
 SketchUpImporter:
   generateBackFace: 0
   mergeCoplanarFaces: 0
   selectedNodes: 0000000001000000
   assetHash:
     serializedVersion: 2
-    Hash: 8dc9248cb23f7d126f45939a66d21a8a
+    Hash: a374e8eb2b41e602a10ffb21c227b961
   longitude: -105.242139
   latitude: 40.018309
   northCorrection: -0
   fileUnit: 0
   sketchUpImportData:
     defaultCamera:
-      position: {x: 3.13967, y: 2.1244996, z: 4.407674}
-      lookAt: {x: 0.9476826, y: 0.66723, z: 0.9978878}
-      up: {x: -0.18293993, y: 0.9410365, z: -0.28457558}
+      position: {x: 2.5131218, y: 2.7261758, z: 1.7837993}
+      lookAt: {x: -0.11574515, y: -0.20240013, z: 0.032346364}
+      up: {x: -0.5657966, y: 0.73333395, z: -0.37695563}
       fov: 35
       aspectRatio: 0
       orthoSize: 1
@@ -29,7 +29,9 @@ SketchUpImporter:
     2100002: Helen_BraceletGlasses
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Mesh Mojarampa (1)
+    4300000: Mesh Mojarampa (2)
+    4300002: Mesh Ramp
+    4300004: Mesh Rampp
   externalObjects: {}
   materials:
     importMaterials: 1
