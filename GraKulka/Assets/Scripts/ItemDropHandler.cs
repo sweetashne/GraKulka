@@ -28,7 +28,7 @@ public class ItemDropHandler : MonoBehaviour, IDropHandler
 
 					if (theitem.name == "Ramp")
 					{
-						GameObject newPlaceAbleItem = Instantiate(Resources.Load(theitem.name), new Vector3(hit.collider.bounds.center.x - 0.5f, hit.point.y, hit.collider.bounds.center.z + 0.5f), Quaternion.Euler(0, 90, 0)) as GameObject;
+						GameObject newPlaceAbleItem = Instantiate(Resources.Load("Prefabs/" + theitem.name), new Vector3(hit.collider.bounds.center.x - 0.5f, hit.point.y, hit.collider.bounds.center.z + 0.5f), Quaternion.Euler(0, 90, 0)) as GameObject;
 						newPlaceAbleItem.name = theitem.name;
 						gamestate.SavePlaceableItem(newPlaceAbleItem);
 						gamestate.EnableUndoButton();
@@ -37,7 +37,7 @@ public class ItemDropHandler : MonoBehaviour, IDropHandler
 					}
 					if (theitem.name == "270Ramp")
 					{
-						GameObject newPlaceAbleItem = Instantiate(Resources.Load(theitem.name), new Vector3(hit.collider.bounds.center.x + 0.5f, hit.point.y, hit.collider.bounds.center.z - 0.5f), Quaternion.Euler(0, 270, 0)) as GameObject;
+						GameObject newPlaceAbleItem = Instantiate(Resources.Load("Prefabs/" + theitem.name), new Vector3(hit.collider.bounds.center.x + 0.5f, hit.point.y, hit.collider.bounds.center.z - 0.5f), Quaternion.Euler(0, 270, 0)) as GameObject;
 						newPlaceAbleItem.name = theitem.name;
 						gamestate.SavePlaceableItem(newPlaceAbleItem);
 						gamestate.EnableUndoButton();
