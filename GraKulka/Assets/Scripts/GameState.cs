@@ -137,26 +137,13 @@ namespace Assets.Scripts
 
 			if (!Physics.Raycast(checkZ, 1))
 			{
-				if (theLastOne.name == "Ramp")
-				{
-					newPlaceAbleItem = Instantiate(Resources.Load("Ramp"), theLastOne.position, theLastOne.rotation) as GameObject;
-					newPlaceAbleItem.name = "Ramp";
-					undoList.Add(newPlaceAbleItem);
-					EnableUndoButton();
-				}
-
-				if (theLastOne.name == "270Ramp")
-				{
-					newPlaceAbleItem = Instantiate(Resources.Load("270Ramp"), theLastOne.position, theLastOne.rotation) as GameObject;
-					newPlaceAbleItem.name = "270Ramp";
-					undoList.Add(newPlaceAbleItem);
-					EnableUndoButton();
-				}
-
+				newPlaceAbleItem = Instantiate(Resources.Load("Prefabs/" + theLastOne.name), theLastOne.position, theLastOne.rotation) as GameObject;
+				newPlaceAbleItem.name = theLastOne.name;
+				undoList.Add(newPlaceAbleItem);
+				EnableUndoButton();
 				ojb.GetComponent<ItemDragHandler>().IsDragAble = false;
 				ojb.GetComponentInParent<Button>().interactable = false;
 			}
-
 			redoList.Remove(theLastOne);
 
 			if (redoList.Count == 0)
