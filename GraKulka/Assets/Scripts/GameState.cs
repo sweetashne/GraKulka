@@ -92,7 +92,7 @@ namespace Assets.Scripts
 		public void Undo()
 		{
 			GameObject theLastOne = undoList[undoList.Count - 1];
-			GameObject ojb = GameObject.Find(theLastOne.name);
+			GameObject ojb = GameObject.Find("Border/" + theLastOne.name);
 			ojb.GetComponent<ItemDragHandler>().IsDragAble = true;
 			ojb.GetComponentInParent<Button>().interactable = true;
 			redoList.Add(new StoredObject(theLastOne.name, theLastOne.transform.position, theLastOne.transform.rotation, theLastOne.transform.localEulerAngles));
@@ -128,6 +128,7 @@ namespace Assets.Scripts
 		// @Sweetashne: Make some restrictions on how many times u can redo actions.
 		// Maybe restrictions on how many items can be placed is enough.
 		// Look into the order of undo/redo actions and disable enable buttons/drag.
+		// @Bug After some combination undo/redo works on two elements at the same time or it's my broken mouse double clicking
 		public void Redo()
 		{
 			GameObject newPlaceAbleItem;
