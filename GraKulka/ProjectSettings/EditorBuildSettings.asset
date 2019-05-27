@@ -9,11 +9,14 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: b4fadf205fbce9a439b5a8b34b4cca55
   - enabled: 1
-    path: Assets/Scenes/PiotrSampleScene.unity
-    guid: c5ea640a2c9b2df43ad4e4c6ef0b06d4
+    path: Assets/Scenes/Level1.unity
+    guid: 07a48a3aacda1f04db95a3e97c22d437
   - enabled: 1
-    path: Assets/Scenes/ActualLevel.unity
-    guid: f8c4e440101cfb54496883949ed5b22f
+    path: Assets/Scenes/Level2.unity
+    guid: 98b8df33cbeee2747b39be572d0e36cb
+  - enabled: 1
+    path: Assets/Scenes/Level3.unity
+    guid: fd911469cce459f44b3f998f09d38444
   - enabled: 1
     path: Assets/Scenes/Credits.unity
     guid: 593a00f128fc4c9438c082ac70bef4ae
