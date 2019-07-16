@@ -11,12 +11,21 @@ public class PlayerController : NetworkBehaviour
 	private bool startCooldown = false;
 	[SerializeField]
 	public int movementboost = 1;
+	[SerializeField]
+	public bool canReceiveBomb = true;
 
 
 	private void Start()
 	{
 		if (isLocalPlayer)
 		{
+			foreach (GameObject go in Resources.FindObjectsOfTypeAll(typeof(GameObject)))
+			{
+				if (go.name == "GameUi")
+				{			
+					go.SetActive(true);
+				}
+			}
 			Camera.main.transform.position = this.transform.position - this.transform.forward * 4 + this.transform.up * 2;
 			Camera.main.transform.LookAt(this.transform.position);
 			Camera.main.transform.parent = this.transform;
@@ -96,16 +105,16 @@ public class PlayerController : NetworkBehaviour
 	{
 		if (collision.transform.tag == "Player" && this.transform.Find("Bomb"))
 		{
-			if (cooldown == 0)
+			if (cooldown == 0 && collision.transform.GetComponent<PlayerController>().canReceiveBomb == true)
 			{
 				//collision.transform.GetComponent<CapsuleCollider>().enabled = false;
 				GameObject bomb = this.transform.Find("Bomb").gameObject;
 				bomb.transform.position = collision.transform.Find("BombSpawn").position;
 				bomb.transform.SetParent(collision.transform);
 				//collision.transform.GetComponent<CapsuleCollider>().enabled = true;
-				collision.transform.GetComponent<PlayerController>().cooldown = 2.0f;
+				collision.transform.GetComponent<PlayerController>().cooldown = 1.0f;
 				collision.transform.GetComponent<PlayerController>().startCooldown = true;
-				cooldown = 2.0f;
+				cooldown = 1.0f;
 				startCooldown = true;
 			}
 		}

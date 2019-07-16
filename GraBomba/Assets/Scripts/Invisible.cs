@@ -20,8 +20,6 @@ public class Invisible : NetworkBehaviour
 				if (Input.GetKeyDown(KeyCode.Alpha3))
 				{
 					CmdInvis();
-					//Camera.main.cullingMask = 2;
-					//GetComponent<MeshRenderer>().enabled = false;
 					startinvisDurationTimer = true;
 					startinvisCdTimer = true;
 				}
@@ -34,8 +32,6 @@ public class Invisible : NetworkBehaviour
 				if (invisDurationTimer >= invisDuration)
 				{
 					CmdResetInvis();
-					//Camera.main.cullingMask = 1;
-					//GetComponent<MeshRenderer>().enabled = true;
 					startinvisDurationTimer = false;
 					invisDurationTimer = 0.0f;
 				}
