@@ -1,14 +1,22 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.UI;
 
 public class Invisible : NetworkBehaviour
 {
 	private float invisCd = 5.0f;
 	private float invisDuration = 3.0f;
-	private float invisCdTimer = 0.0f;
+	private float invisCdTimer = 5.0f;
 	private float invisDurationTimer = 0.0f;
 	private bool startinvisDurationTimer = false;
 	private bool startinvisCdTimer = false;
+	private GameObject invisBorder;
+
+	private void Start()
+	{
+		invisBorder = GameObject.Find("InvisBorder");
+	}
 
 	private void Update()
 	{
@@ -22,6 +30,7 @@ public class Invisible : NetworkBehaviour
 					CmdInvis();
 					startinvisDurationTimer = true;
 					startinvisCdTimer = true;
+					invisBorder.GetComponent<Image>().color = Color.grey;
 				}
 			}
 
@@ -39,12 +48,15 @@ public class Invisible : NetworkBehaviour
 
 			if (startinvisCdTimer == true)
 			{
-				invisCdTimer += Time.deltaTime;
+				invisBorder.transform.Find("CooldownText").GetComponent<Text>().text = String.Format("{0:0}", invisCdTimer);
+				invisCdTimer -= Time.deltaTime;
 
-				if (invisCdTimer >= invisCd)
+				if (invisCdTimer <= 0)
 				{
+					invisBorder.GetComponent<Image>().color = Color.white;
+					invisBorder.transform.Find("CooldownText").GetComponent<Text>().text = "";
 					startinvisCdTimer = false;
-					invisCdTimer = 0.0f;
+					invisCdTimer = invisCd;
 				}
 			}
 		}
@@ -53,35 +65,66 @@ public class Invisible : NetworkBehaviour
 	[Command]
 	void CmdInvis()
 	{
-		GetComponent<MeshRenderer>().enabled = false;
-		transform.Find("Visor").GetComponent<MeshRenderer>().enabled = false;
-		transform.Find("NameBarCanvas").GetComponent<Canvas>().enabled = false;
-		RpcInvis();
+		if (isLocalPlayer)
+		{
+			GetComponent<MeshRenderer>().material.color = Color.grey;
+			RpcInvis();
+		}
+		else
+		{
+			GetComponent<MeshRenderer>().enabled = false;
+			transform.Find("Visor").GetComponent<MeshRenderer>().enabled = false;
+			transform.Find("NameBarCanvas").GetComponent<Canvas>().enabled = false;
+			RpcInvis();
+		}
+
 	}
 
 	[ClientRpc]
 	void RpcInvis()
 	{
-		GetComponent<MeshRenderer>().enabled = false;
-		transform.Find("Visor").GetComponent<MeshRenderer>().enabled = false;
-		transform.Find("NameBarCanvas").GetComponent<Canvas>().enabled = false;
+		if (isLocalPlayer)
+		{
+			GetComponent<MeshRenderer>().material.color = Color.grey;
+		}
+		else
+		{
+			GetComponent<MeshRenderer>().enabled = false;
+			transform.Find("Visor").GetComponent<MeshRenderer>().enabled = false;
+			transform.Find("NameBarCanvas").GetComponent<Canvas>().enabled = false;
+		}
+
 	}
 
 	[Command]
 	void CmdResetInvis()
 	{
-		GetComponent<MeshRenderer>().enabled = true;
-		transform.Find("Visor").GetComponent<MeshRenderer>().enabled = true;
-		transform.Find("NameBarCanvas").GetComponent<Canvas>().enabled = true;
-		RpcResetInvis();
+		if (isLocalPlayer)
+		{
+			GetComponent<MeshRenderer>().material.color = Color.blue;
+			RpcResetInvis();
+		}
+		else
+		{
+			GetComponent<MeshRenderer>().enabled = true;
+			transform.Find("Visor").GetComponent<MeshRenderer>().enabled = true;
+			transform.Find("NameBarCanvas").GetComponent<Canvas>().enabled = true;
+			RpcResetInvis();
+		}
 	}
 
 	[ClientRpc]
 	void RpcResetInvis()
 	{
-		GetComponent<MeshRenderer>().enabled = true;
-		transform.Find("Visor").GetComponent<MeshRenderer>().enabled = true;
-		transform.Find("NameBarCanvas").GetComponent<Canvas>().enabled = true;
-
+		if (isLocalPlayer)
+		{
+			GetComponent<MeshRenderer>().material.color = Color.blue;
+		}
+		else
+		{
+			GetComponent<MeshRenderer>().enabled = true;
+			transform.Find("Visor").GetComponent<MeshRenderer>().enabled = true;
+			transform.Find("NameBarCanvas").GetComponent<Canvas>().enabled = true;
+		}
 	}
 }

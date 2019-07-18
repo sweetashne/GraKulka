@@ -1,14 +1,22 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.UI;
 
 public class Shield : NetworkBehaviour
 {
 	private float shieldCd = 5.0f;
-	private float shieldDuration = 6.0f;
-	private float shieldCdTimer = 0.0f;
+	private float shieldDuration = 4.0f;
+	private float shieldCdTimer = 5.0f;
 	private float shieldDurationTimer = 0.0f;
 	private bool startshieldDurationTimer = false;
 	private bool startshieldCdTimer = false;
+	private GameObject shieldBorder;
+
+	private void Start()
+	{
+		shieldBorder = GameObject.Find("ShieldBorder");
+	}
 
 	private void Update()
 	{
@@ -21,6 +29,7 @@ public class Shield : NetworkBehaviour
 					Cmdshield();
 					startshieldDurationTimer = true;
 					startshieldCdTimer = true;
+					shieldBorder.GetComponent<Image>().color = Color.grey;
 				}
 			}
 
@@ -38,12 +47,15 @@ public class Shield : NetworkBehaviour
 
 			if (startshieldCdTimer == true)
 			{
-				shieldCdTimer += Time.deltaTime;
+				shieldBorder.transform.Find("CooldownText").GetComponent<Text>().text = String.Format("{0:0}", shieldCdTimer); 
+				shieldCdTimer -= Time.deltaTime;
 
-				if (shieldCdTimer >= shieldCd)
+				if (shieldCdTimer <= 0)
 				{
+					shieldBorder.GetComponent<Image>().color = Color.white;
+					shieldBorder.transform.Find("CooldownText").GetComponent<Text>().text = "";
 					startshieldCdTimer = false;
-					shieldCdTimer = 0.0f;
+					shieldCdTimer = shieldCd;
 				}
 			}
 		}

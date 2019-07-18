@@ -13,15 +13,17 @@ public class PlayerController : NetworkBehaviour
 	public int movementboost = 1;
 	[SerializeField]
 	public bool canReceiveBomb = true;
+	private GameObject minimapCamera;
 
 
 	private void Start()
 	{
+		minimapCamera = GameObject.Find("MinimapCamera");
 		if (isLocalPlayer)
 		{
 			foreach (GameObject go in Resources.FindObjectsOfTypeAll(typeof(GameObject)))
 			{
-				if (go.name == "GameUi")
+				if (go.name == "GameUi" || go.name == "MinimapCanvas")
 				{			
 					go.SetActive(true);
 				}
@@ -29,10 +31,10 @@ public class PlayerController : NetworkBehaviour
 			Camera.main.transform.position = this.transform.position - this.transform.forward * 4 + this.transform.up * 2;
 			Camera.main.transform.LookAt(this.transform.position);
 			Camera.main.transform.parent = this.transform;
+			SetName("Player " + netId);
 		}
 
-		int playerNumber = GameObject.FindGameObjectsWithTag("Player").Length;
-		this.name = $"Player" + playerNumber;
+		this.name = "Player" + netId;
 	}
 
 	void Update()
@@ -59,6 +61,7 @@ public class PlayerController : NetworkBehaviour
 
 		transform.Rotate(0, x, 0);
 		transform.Translate(0, 0, z);
+
 		if (Input.GetKey(KeyCode.LeftControl))
 		{
 			if (Input.GetKeyDown(KeyCode.Space))
@@ -79,6 +82,15 @@ public class PlayerController : NetworkBehaviour
 				cooldown -= Time.deltaTime;
 			}
 		}
+	}
+
+	private void LateUpdate()
+	{
+		Vector3 newPosition = transform.position;
+		newPosition.y = minimapCamera.transform.position.y;
+		minimapCamera.transform.position = newPosition;
+
+		//minimapCamera.transform.rotation = Quaternion.Euler(90f, transform.eulerAngles.y, 0f);
 	}
 
 	[Command]

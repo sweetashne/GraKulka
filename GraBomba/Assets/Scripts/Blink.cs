@@ -1,12 +1,20 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.UI;
 
 public class Blink : NetworkBehaviour
 {
 	private float blinkCd = 2.0f;
 	private int blinkRange = 5;
-	private float blinkCdTimer = 0.0f;
+	private float blinkCdTimer = 2.0f;
 	private bool startBlinkCdTimer = false;
+	private GameObject blinkBorder;
+
+	private void Start()
+	{
+		blinkBorder = GameObject.Find("BlinkBorder");
+	}
 
 	private void Update()
 	{
@@ -16,17 +24,21 @@ public class Blink : NetworkBehaviour
 			{
 				transform.position += transform.forward * blinkRange;
 				startBlinkCdTimer = true;
+				blinkBorder.GetComponent<Image>().color = Color.grey;
 			}
 		}
 
 		if (startBlinkCdTimer == true)
 		{
-			blinkCdTimer += Time.deltaTime;
+			blinkBorder.transform.Find("CooldownText").GetComponent<Text>().text = String.Format("{0:0}", blinkCdTimer);
+			blinkCdTimer -= Time.deltaTime;
 
-			if (blinkCdTimer >= blinkCd)
+			if (blinkCdTimer <= 0)
 			{
+				blinkBorder.GetComponent<Image>().color = Color.white;
+				blinkBorder.transform.Find("CooldownText").GetComponent<Text>().text = "";
 				startBlinkCdTimer = false;
-				blinkCdTimer = 0.0f;
+				blinkCdTimer = blinkCd;
 			}
 		}
 	}
