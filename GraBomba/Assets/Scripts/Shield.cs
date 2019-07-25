@@ -12,24 +12,31 @@ public class Shield : NetworkBehaviour
 	private bool startshieldDurationTimer = false;
 	private bool startshieldCdTimer = false;
 	private GameObject shieldBorder;
+	private Text shieldBorderText;
+	private Image shieldBorderImage;
 
 	private void Start()
 	{
-		shieldBorder = GameObject.Find("ShieldBorder");
+		if (isLocalPlayer)
+		{
+			shieldBorder = GameObject.Find("ShieldBorder");
+			shieldBorderText = shieldBorder.transform.Find("CooldownText").GetComponent<Text>();
+			shieldBorderImage = shieldBorder.GetComponent<Image>();
+		}
 	}
 
 	private void Update()
 	{
 		if (isLocalPlayer)
 		{
-			if (startshieldCdTimer == false && !transform.Find("Bomb"))
+			if (!startshieldCdTimer && !transform.Find("Bomb"))
 			{
 				if (Input.GetKeyDown(KeyCode.Alpha4))
 				{
 					Cmdshield();
 					startshieldDurationTimer = true;
 					startshieldCdTimer = true;
-					shieldBorder.GetComponent<Image>().color = Color.grey;
+					shieldBorderImage.color = Color.grey;
 				}
 			}
 
@@ -47,13 +54,13 @@ public class Shield : NetworkBehaviour
 
 			if (startshieldCdTimer == true)
 			{
-				shieldBorder.transform.Find("CooldownText").GetComponent<Text>().text = String.Format("{0:0}", shieldCdTimer); 
+				shieldBorderText.text = String.Format("{0:0}", shieldCdTimer);
 				shieldCdTimer -= Time.deltaTime;
 
 				if (shieldCdTimer <= 0)
 				{
-					shieldBorder.GetComponent<Image>().color = Color.white;
-					shieldBorder.transform.Find("CooldownText").GetComponent<Text>().text = "";
+					shieldBorderImage.color = Color.white;
+					shieldBorderText.text = "";
 					startshieldCdTimer = false;
 					shieldCdTimer = shieldCd;
 				}
@@ -64,8 +71,6 @@ public class Shield : NetworkBehaviour
 	[Command]
 	void Cmdshield()
 	{
-		GetComponent<PlayerController>().canReceiveBomb = false;
-		GetComponent<MeshRenderer>().material.color = Color.red;
 		Rpcshield();
 	}
 
@@ -79,9 +84,6 @@ public class Shield : NetworkBehaviour
 	[Command]
 	void CmdResetshield()
 	{
-		GetComponent<CapsuleCollider>().enabled = true;
-		GetComponent<MeshRenderer>().material.color = Color.white;
-		GetComponent<PlayerController>().canReceiveBomb = true;
 		RpcResetshield();
 	}
 
@@ -91,12 +93,12 @@ public class Shield : NetworkBehaviour
 		if (isLocalPlayer)
 		{
 			GetComponent<MeshRenderer>().material.color = Color.blue;
-			GetComponent<PlayerController>().canReceiveBomb = true;
-		} 
+		}
 		else
 		{
 			GetComponent<MeshRenderer>().material.color = Color.white;
-			GetComponent<PlayerController>().canReceiveBomb = true;
-		}	
+		}
+
+		GetComponent<PlayerController>().canReceiveBomb = true;
 	}
 }

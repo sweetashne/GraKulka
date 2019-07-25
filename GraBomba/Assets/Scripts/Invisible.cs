@@ -12,17 +12,23 @@ public class Invisible : NetworkBehaviour
 	private bool startinvisDurationTimer = false;
 	private bool startinvisCdTimer = false;
 	private GameObject invisBorder;
+	private Image invisBorderImage;
+	private Text invisBorderCoolDownText;
 
 	private void Start()
 	{
-		invisBorder = GameObject.Find("InvisBorder");
+		if (isLocalPlayer)
+		{
+			invisBorder = GameObject.Find("InvisBorder");
+			invisBorderImage = invisBorder.GetComponent<Image>();
+			invisBorderCoolDownText = invisBorder.transform.Find("CooldownText").GetComponent<Text>();
+		}
 	}
 
 	private void Update()
 	{
 		if (isLocalPlayer)
 		{
-
 			if (startinvisCdTimer == false)
 			{
 				if (Input.GetKeyDown(KeyCode.Alpha3))
@@ -30,7 +36,7 @@ public class Invisible : NetworkBehaviour
 					CmdInvis();
 					startinvisDurationTimer = true;
 					startinvisCdTimer = true;
-					invisBorder.GetComponent<Image>().color = Color.grey;
+					invisBorderImage.color = Color.grey;
 				}
 			}
 
@@ -48,13 +54,13 @@ public class Invisible : NetworkBehaviour
 
 			if (startinvisCdTimer == true)
 			{
-				invisBorder.transform.Find("CooldownText").GetComponent<Text>().text = String.Format("{0:0}", invisCdTimer);
+				invisBorderCoolDownText.text = String.Format("{0:0}", invisCdTimer);
 				invisCdTimer -= Time.deltaTime;
 
 				if (invisCdTimer <= 0)
 				{
-					invisBorder.GetComponent<Image>().color = Color.white;
-					invisBorder.transform.Find("CooldownText").GetComponent<Text>().text = "";
+					invisBorderImage.color = Color.white;
+					invisBorderCoolDownText.text = "";
 					startinvisCdTimer = false;
 					invisCdTimer = invisCd;
 				}
@@ -65,19 +71,7 @@ public class Invisible : NetworkBehaviour
 	[Command]
 	void CmdInvis()
 	{
-		if (isLocalPlayer)
-		{
-			GetComponent<MeshRenderer>().material.color = Color.grey;
-			RpcInvis();
-		}
-		else
-		{
-			GetComponent<MeshRenderer>().enabled = false;
-			transform.Find("Visor").GetComponent<MeshRenderer>().enabled = false;
-			transform.Find("NameBarCanvas").GetComponent<Canvas>().enabled = false;
-			RpcInvis();
-		}
-
+		RpcInvis();
 	}
 
 	[ClientRpc]
@@ -93,24 +87,12 @@ public class Invisible : NetworkBehaviour
 			transform.Find("Visor").GetComponent<MeshRenderer>().enabled = false;
 			transform.Find("NameBarCanvas").GetComponent<Canvas>().enabled = false;
 		}
-
 	}
 
 	[Command]
 	void CmdResetInvis()
 	{
-		if (isLocalPlayer)
-		{
-			GetComponent<MeshRenderer>().material.color = Color.blue;
-			RpcResetInvis();
-		}
-		else
-		{
-			GetComponent<MeshRenderer>().enabled = true;
-			transform.Find("Visor").GetComponent<MeshRenderer>().enabled = true;
-			transform.Find("NameBarCanvas").GetComponent<Canvas>().enabled = true;
-			RpcResetInvis();
-		}
+		RpcResetInvis();
 	}
 
 	[ClientRpc]

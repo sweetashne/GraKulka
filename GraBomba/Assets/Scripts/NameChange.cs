@@ -10,31 +10,38 @@ public class NameChange : NetworkBehaviour
 	[SerializeField]
 	private PlayerController player;
 
-	private GameObject hmm;
+	private GameObject nameChangeCanvas;
 
 	private InputField nameChange;
+
+	private PlayerController player1;
+
+	private void Start()
+	{
+		player1 = GameObject.Find("Player1").GetComponent<PlayerController>();
+		usernameText = transform.Find("NameBar").GetComponent<Text>();
+
+		foreach (GameObject go in Resources.FindObjectsOfTypeAll(typeof(GameObject)))
+		{
+			if (go.name == "NameChangeCanvas")
+			{
+				nameChangeCanvas = go;
+				nameChange = go.transform.Find("NameChange").GetComponent<InputField>();
+				var se = new InputField.SubmitEvent();
+				se.AddListener(SubmitName);
+				nameChange.onEndEdit = se;
+			}
+		}
+	}
 
 	private void Update()
 	{
 		usernameText.transform.rotation = Quaternion.LookRotation(transform.position - Camera.main.transform.position);
 		usernameText.text = player.username;
-		if (Input.GetKey(KeyCode.LeftControl))
+
+		if (Input.GetKey(KeyCode.LeftControl) && Input.GetKeyDown(KeyCode.N))
 		{
-			if (Input.GetKeyDown(KeyCode.N))
-			{
-				foreach (GameObject go in Resources.FindObjectsOfTypeAll(typeof(GameObject)))
-				{
-					if (go.name == "NameChangeCanvas")
-					{
-						hmm = go;
-						go.SetActive(true);
-						nameChange = go.transform.Find("NameChange").GetComponent<InputField>();
-						var se = new InputField.SubmitEvent();
-						se.AddListener(SubmitName);
-						nameChange.onEndEdit = se;
-					}
-				}
-			}
+			nameChangeCanvas.SetActive(true);
 		}
 	}
 
@@ -42,11 +49,12 @@ public class NameChange : NetworkBehaviour
 	{
 		if (!player.isLocalPlayer)
 		{
-			player = GameObject.Find("Player1").GetComponent<PlayerController>();
+			player = player1;
 			player.SetName(name);
 			player.username = name;
 			usernameText.text = name;
-			hmm.SetActive(false);
+			nameChange.text = "";
+			nameChangeCanvas.SetActive(false);
 			player = GameObject.FindGameObjectsWithTag("Player")[GameObject.FindGameObjectsWithTag("Player").Length - 1].GetComponent<PlayerController>();
 			return;
 		}
@@ -55,7 +63,8 @@ public class NameChange : NetworkBehaviour
 			player.SetName(name);
 			player.username = name;
 			usernameText.text = name;
-			hmm.SetActive(false);
+			nameChange.text = "";
+			nameChangeCanvas.SetActive(false);
 		}
 	}
 }

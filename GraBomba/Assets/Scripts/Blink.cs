@@ -10,35 +10,44 @@ public class Blink : NetworkBehaviour
 	private float blinkCdTimer = 2.0f;
 	private bool startBlinkCdTimer = false;
 	private GameObject blinkBorder;
+	private Image blinkBorderImage;
+	private Text blinkborderCooldownText;
 
 	private void Start()
 	{
-		blinkBorder = GameObject.Find("BlinkBorder");
+		if (isLocalPlayer)
+		{
+			blinkBorder = GameObject.Find("BlinkBorder");
+			blinkBorderImage = blinkBorder.GetComponent<Image>();
+			blinkborderCooldownText = blinkBorder.transform.Find("CooldownText").GetComponent<Text>();
+		}
 	}
 
 	private void Update()
 	{
-		if (startBlinkCdTimer == false)
+		if (isLocalPlayer)
 		{
-			if (Input.GetKeyDown(KeyCode.Alpha2))
+			if (startBlinkCdTimer == false)
 			{
-				transform.position += transform.forward * blinkRange;
-				startBlinkCdTimer = true;
-				blinkBorder.GetComponent<Image>().color = Color.grey;
+				if (Input.GetKeyDown(KeyCode.Alpha2))
+				{
+					transform.position += transform.forward * blinkRange;
+					startBlinkCdTimer = true;
+					blinkBorderImage.color = Color.grey;
+				}
 			}
-		}
-
-		if (startBlinkCdTimer == true)
-		{
-			blinkBorder.transform.Find("CooldownText").GetComponent<Text>().text = String.Format("{0:0}", blinkCdTimer);
-			blinkCdTimer -= Time.deltaTime;
-
-			if (blinkCdTimer <= 0)
+			if (startBlinkCdTimer == true)
 			{
-				blinkBorder.GetComponent<Image>().color = Color.white;
-				blinkBorder.transform.Find("CooldownText").GetComponent<Text>().text = "";
-				startBlinkCdTimer = false;
-				blinkCdTimer = blinkCd;
+				blinkborderCooldownText.text = String.Format("{0:0}", blinkCdTimer);
+				blinkCdTimer -= Time.deltaTime;
+
+				if (blinkCdTimer <= 0)
+				{
+					blinkBorderImage.color = Color.white;
+					blinkborderCooldownText.text = "";
+					startBlinkCdTimer = false;
+					blinkCdTimer = blinkCd;
+				}
 			}
 		}
 	}

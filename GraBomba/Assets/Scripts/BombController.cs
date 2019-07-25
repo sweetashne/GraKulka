@@ -5,95 +5,78 @@ using UnityEngine.UI;
 public class BombController : NetworkBehaviour
 {
 	public const float countdowntime = 30.0f;
+
 	[SyncVar]
 	public float countdown = countdowntime;
 	private bool countdownStop = false;
 	public GameObject bombCountDownCanvas;
+	private Text bombTimerText;
+	private Transform bombtimer;
+	private GameObject annoucer;
+	private Text annoucerText;
 
 	private void Start()
 	{
-		bombCountDownCanvas.transform.Find("BombTimer").GetComponent<Text>().text = countdown.ToString();
+		bombTimerText = bombCountDownCanvas.transform.Find("BombTimer").GetComponent<Text>();
+		bombTimerText.text = countdown.ToString();
+		bombtimer = bombCountDownCanvas.transform.Find("BombTimer");
+
+		foreach (GameObject go in Resources.FindObjectsOfTypeAll(typeof(GameObject)))
+		{
+			if (go.name == "Annoucer")
+			{
+				annoucer = go;
+				annoucerText = go.transform.Find("AnnoucerText").GetComponent<Text>();
+			}
+		}
 	}
 
 	private void Update()
 	{
 		if (countdownStop == false)
 		{
-			bombCountDownCanvas.transform.Find("BombTimer").GetComponent<Text>().text = countdown.ToString();
+			bombTimerText.text = countdown.ToString();
 			countdown -= Time.deltaTime;
-			bombCountDownCanvas.transform.Find("BombTimer").transform.rotation = Quaternion.LookRotation(transform.position - Camera.main.transform.position);
+			bombtimer.rotation = Quaternion.LookRotation(transform.position - Camera.main.transform.position);
+
 			if (countdown <= 0)
 			{
 				CmdSendExplodedMessage(transform.parent.GetComponent<PlayerController>().username);
 			}
 		}
 
-		if (Input.GetKey(KeyCode.LeftControl))
+		if (isServer && Input.GetKey(KeyCode.LeftControl) && Input.GetKeyDown(KeyCode.R))
 		{
-			if (Input.GetKeyDown(KeyCode.R))
-			{
-				CmdRestart();
-			}
+			CmdRestart();
 		}
 	}
 
 	[Command]
 	void CmdSendExplodedMessage(string name)
 	{
-		foreach (GameObject go in Resources.FindObjectsOfTypeAll(typeof(GameObject)))
-		{
-			if (go.name == "Annoucer")
-			{
-				go.transform.Find("AnnoucerText").GetComponent<Text>().text = name + " exploded";
-				go.SetActive(true);
-				countdownStop = true;
-				RpcSendExplodedMessage(name);
-			}
-		}
+		RpcSendExplodedMessage(name);
 	}
 
 	[ClientRpc]
 	void RpcSendExplodedMessage(string name)
 	{
-		foreach (GameObject go in Resources.FindObjectsOfTypeAll(typeof(GameObject)))
-		{
-			if (go.name == "Annoucer")
-			{
-				go.transform.Find("AnnoucerText").GetComponent<Text>().text = name + " exploded";
-				go.SetActive(true);
-				countdownStop = true;
-			}
-		}
+		annoucerText.text = name + " exploded";
+		annoucer.SetActive(true);
+		countdownStop = true;
 	}
 
 	[Command]
 	void CmdRestart()
 	{
-		foreach (GameObject go in Resources.FindObjectsOfTypeAll(typeof(GameObject)))
-		{
-			if (go.name == "Annoucer")
-			{
-				go.transform.Find("AnnoucerText").GetComponent<Text>().text = name + " exploded";
-				go.SetActive(false);
-				countdownStop = false;
-				countdown = 30.0f;
-				RpcRestart();
-			}
-		}
+		RpcRestart();
 	}
 
 	[ClientRpc]
 	void RpcRestart()
 	{
-		foreach (GameObject go in Resources.FindObjectsOfTypeAll(typeof(GameObject)))
-		{
-			if (go.name == "Annoucer")
-			{
-				go.transform.Find("AnnoucerText").GetComponent<Text>().text = name + " exploded";
-				go.SetActive(false);
-				countdownStop = false;
-				countdown = 30.0f;
-			}
-		}
+		annoucerText.text = "";
+		annoucer.SetActive(false);
+		countdownStop = false;
+		countdown = countdowntime;
 	}
 }

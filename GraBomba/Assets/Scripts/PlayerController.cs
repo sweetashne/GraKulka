@@ -5,29 +5,41 @@ public class PlayerController : NetworkBehaviour
 {
 	public GameObject bombPrefab;
 	public Transform bombSpawn;
+
 	[SyncVar]
 	public string username = "Player";
 	private float cooldown = 0.0f;
 	private bool startCooldown = false;
+
 	[SerializeField]
 	public int movementboost = 1;
+
 	[SerializeField]
 	public bool canReceiveBomb = true;
 	private GameObject minimapCamera;
-
+	private bool fpsCounterSwitch = true;
+	private bool bombSpawned = false;
+	private GameObject fpsCounter;
 
 	private void Start()
 	{
 		minimapCamera = GameObject.Find("MinimapCamera");
+
 		if (isLocalPlayer)
 		{
 			foreach (GameObject go in Resources.FindObjectsOfTypeAll(typeof(GameObject)))
 			{
 				if (go.name == "GameUi" || go.name == "MinimapCanvas")
-				{			
+				{
 					go.SetActive(true);
 				}
+
+				if (go.name == "FPSCounter")
+				{
+					fpsCounter = go;
+				}
 			}
+
 			Camera.main.transform.position = this.transform.position - this.transform.forward * 4 + this.transform.up * 2;
 			Camera.main.transform.LookAt(this.transform.position);
 			Camera.main.transform.parent = this.transform;
@@ -62,12 +74,10 @@ public class PlayerController : NetworkBehaviour
 		transform.Rotate(0, x, 0);
 		transform.Translate(0, 0, z);
 
-		if (Input.GetKey(KeyCode.LeftControl))
+		if (Input.GetKey(KeyCode.LeftControl) && Input.GetKeyDown(KeyCode.F))
 		{
-			if (Input.GetKeyDown(KeyCode.Space))
-			{
-				CmdSpawnBomb();
-			}
+			fpsCounter.SetActive(fpsCounterSwitch);
+			fpsCounterSwitch = !fpsCounterSwitch;
 		}
 
 		if (startCooldown == true)
@@ -81,6 +91,11 @@ public class PlayerController : NetworkBehaviour
 			{
 				cooldown -= Time.deltaTime;
 			}
+		}
+
+		if (isServer && !bombSpawned && Input.GetKey(KeyCode.LeftControl) && Input.GetKeyDown(KeyCode.Space))
+		{
+			CmdSpawnBomb();
 		}
 	}
 
@@ -111,6 +126,7 @@ public class PlayerController : NetworkBehaviour
 		bomb.transform.SetParent(this.transform);
 		bomb.name = "Bomb";
 		NetworkServer.Spawn(bomb);
+		bombSpawned = true;
 	}
 
 	private void OnCollisionEnter(Collision collision)
@@ -119,11 +135,9 @@ public class PlayerController : NetworkBehaviour
 		{
 			if (cooldown == 0 && collision.transform.GetComponent<PlayerController>().canReceiveBomb == true)
 			{
-				//collision.transform.GetComponent<CapsuleCollider>().enabled = false;
 				GameObject bomb = this.transform.Find("Bomb").gameObject;
 				bomb.transform.position = collision.transform.Find("BombSpawn").position;
 				bomb.transform.SetParent(collision.transform);
-				//collision.transform.GetComponent<CapsuleCollider>().enabled = true;
 				collision.transform.GetComponent<PlayerController>().cooldown = 1.0f;
 				collision.transform.GetComponent<PlayerController>().startCooldown = true;
 				cooldown = 1.0f;
